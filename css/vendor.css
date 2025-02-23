@@ -22,7 +22,7 @@
 code[class*=language-],
 pre[class*=language-] {
   color          : #f8f8f2;
-  background     : none;
+  background     : #b5d9db/;
   text-shadow    : 0 1px rgba(0, 0, 0, 0.3);
   font-family    : var(--font-mono);
   font-size      : calc(var(--text-size) * 0.8333);
