@@ -102,7 +102,7 @@
 
   /* monospace
    */
-   --font-mono: "Rethink Sans", Sans-serif, monospace;
+   --font-mono: Consolas, "Andale Mono", Courier, "Courier New", monospace;
 }
 
 /* ------------------------------------------------------------------- 
