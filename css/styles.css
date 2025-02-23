@@ -117,12 +117,12 @@
    * color-3(#595968)
    */
     --color-1                     : #41BCA5;
-    --color-2                     : #d1c1b3;
+    --color-2                     : #0e835c;
     --color-3                     : #1E564B;
 
   /* theme color variations
    */
-    --color-1-lightest            : hsla(12, 75%, 75%, 1);
+    --color-1-lightest            : #afcec8;
     --color-1-lighter             : #98f7e6;
     --color-1-light               : #61c9b6;
     --color-1-dark                : #26a089;
