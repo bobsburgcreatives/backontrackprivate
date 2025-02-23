@@ -90,18 +90,17 @@
 /* ------------------------------------------------------------------- 
  * ## fonts 
  * ------------------------------------------------------------------- */
- @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Cormorant+SC:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Newsreader:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+ @import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap");
 
  :root {
-     --font-1: "Newsreader", Serif;
-     --font-2: "Cormorant Garamond", Serif;
+     --font-1: "Bricolage Grotesque", Sans-serif;
+     --font-2: "Roboto", Sans-serif;
      --font-3: "Inter", Sans-serif;
-     --font-4: "Cormorant SC", Serif;
+     --font-4: "Bricolage Grotesque", Sans-serif;
  
-   /* monospace
-    */
+     /* monospace */
      --font-mono: Consolas, "Andale Mono", Courier, "Courier New", monospace;
-}
+ } 
 
 /* ------------------------------------------------------------------- 
  * ## colors
