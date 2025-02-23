@@ -90,16 +90,16 @@
 /* ------------------------------------------------------------------- 
  * ## fonts 
  * ------------------------------------------------------------------- */
- @import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque&family=Roboto:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap");
+ @import url("https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Cormorant+SC:wght@400;500;600;700&family=Newsreader:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 
  :root {
-     --font-1: "Bricolage Grotesque", Sans-serif;
-     --font-2: "Roboto", Sans-serif;
-     --font-3: "Inter", Sans-serif;
-     --font-4: "Bricolage Grotesque", Sans-serif;
- 
+     --font-1: "Newsreader", Serif;
+     --font-2: "Rethink Sans", Sans-serif; /* Changed to Rethink Sans */
+     --font-3: "Rethink Sans", Sans-serif; /* Changed to Rethink Sans */
+     --font-4: "Rethink Sans", Sans-serif; /* Changed to Rethink Sans */
+     
      /* monospace */
-     --font-mono: Consolas, "Andale Mono", Courier, "Courier New", monospace;
+     --font-mono: "Rethink Sans", "Andale Mono", Courier, "Courier New", monospace; /* Updated monospace to include Rethink Sans */
  } 
 
 /* ------------------------------------------------------------------- 
