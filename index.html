@@ -116,37 +116,71 @@
 
         <!-- # intro
         ================================================== -->                    
-            <section id="intro" class="s-intro">
+        <section id="intro" class="s-intro">
 
-                <div class="s-medical.jpg"></div>
-    
-                <div class="row s-intro__content">
-                    <div class="column xl-12">
-                        <p class="s-intro__desc lead" style="margin-top: 50px;">
+            <div class="background-image"></div>
+
+            <div class="row s-intro__content">
+                <div class="column xl-12">
+                    <p class="s-intro__desc lead" style="margin-top: 50px;">
                         <div class="s-intro__pretitle" style="margin-bottom: 20px;">Where Life Gets</div>
                         <h1 class="s-intro__title" style="font-size: 120px;">BACK ON TRACK</h1>
-    
+
                         <p class="s-intro__desc lead" style="font-size: 20px;">
                             <i>Diabetes Wellness Retreat</i>
                             A life-changing experience designed for individuals 
                             with <i>Type 2 Diabetes (T2D)</i>, located on the 
                             stunning Aegean Sea coast in Platamonas, Greece, 
                             just 25 km from Mount Olympus.
+                        </p>
                     </p>
-                
                 </div>                
             </div> <!-- s-intro__content -->     
-            
+
             <div class="s-intro__scroll-down">
                 <a href="#about" class="smoothscroll">
                     <span class="scroll-text u-screen-reader-text">Learn More</span>
                     <div class="scroll-icon">
-                        <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m5.214 14.522s4.505 4.502 6.259 6.255c.146.147.338.22.53.22s.384-.073.53-.22c1.754-1.752 6.249-6.244 6.249-6.244.144-.144.216-.334.217-.523 0-.193-.074-.386-.221-.534-.293-.293-.766-.294-1.057-.004l-4.968 4.968v-14.692c0-.414-.336-.75-.75-.75s-.75.336-.75.75v14.692l-4.979-4.978c-.289-.289-.761-.287-1.054.006-.148.148-.222.341-.221.534 0 .189.071.377.215.52z" fill-rule="nonzero"/></svg>
+                        <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="m5.214 14.522s4.505 4.502 6.259 6.255c.146.147.338.22.53.22s.384-.073.53-.22c1.754-1.752 6.249-6.244 6.249-6.244.144-.144.216-.334.217-.523 0-.193-.074-.386-.221-.534-.293-.293-.766-.294-1.057-.004l-4.968 4.968v-14.692c0-.414-.336-.75-.75-.75s-.75.336-.75.75v14.692l-4.979-4.978c-.289-.289-.761-.287-1.054.006-.148.148-.222.341-.221.534 0 .189.071.377.215.52z" fill-rule="nonzero"/>
+                        </svg>
                     </div>
                 </a>
             </div> <!-- s-intro__scroll-down -->
 
+            <style>
+                #intro {
+                    position: relative;
+                    overflow: hidden;
+                    height: 100vh; /* Adjust height as needed */
+                }
+
+                .background-image {
+                    background: url('images/gallery/1/s-medical.jpg') no-repeat center center / cover;
+                    position: absolute;
+                    top: 100%; /* Start below the section */
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    animation: slideUp 2s forwards; /* Animation for sliding up */
+                }
+
+                @keyframes slideUp {
+                    to {
+                        top: 0; /* Slide up to the top */
+                    }
+                }
+
+                .s-intro__content {
+                    position: relative;
+                    z-index: 1; /* Ensure content stays above the background */
+                    color: white; /* Text color for visibility */
+                    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Optional text shadow for better readability */
+                }
+            </style>
+
         </section> <!-- end s-intro -->
+
 
 
         <!-- # about
