@@ -6,7 +6,7 @@
     ================================================== -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>About - Back On Track</title>
+    <title>Back on Track</title>
 
     <script>
         document.documentElement.classList.remove('no-js');
@@ -25,6 +25,9 @@
     <link rel="icon" type="image/png" sizes="16x16" href="ellipse 45.svg">
     <link rel="manifest" href="site.webmanifest">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
 </head>
 
 
@@ -40,392 +43,284 @@
             <div></div>
         </div>
     </div>   
-
+    
 
     <!-- page wrap
     ================================================== -->
-    <div id="page" class="s-pagewrap">
+    <div id="page" class="s-pagewrap ss-home">
 
         <div class="menu-underlay"></div>
 
-        <!-- # site header 
-        ================================================== -->
-        <header class="s-header">
-
-            <div class="s-header__block">
-                <div class="s-header__logo">
-                    <a class="BACK ON TRACK LOGO" href="index.html">
-                        <img src="images/BACK ON TRACK LOGO.svg" alt="Homepage">
-                    </a>
-                </div>
-
-                <a class="s-header__menu-toggle" href="#0"><span>Browse</span></a>
-
-                <div class="s-header__cta">
-                    <a href="consultations.html" class="btn btn--primary s-header__cta-btn">Book a Consultation</a>                        
-                </div>
-
-            </div> <!-- end s-header__block -->
-
-            <nav class="s-header__nav">    
-
-                <a href="#0" class="s-header__nav-close-btn" title="close"><span>Close</span></a>
-
-                <div class="s-header__logo">
-                    <a class="logo" href="index.html">
-                        <img src="images/BACK ON TRACK LOGO.svg" alt="Homepage">
-                    </a>
-                </div>
-
-                <ul class="s-header__nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="retreats.html">Retreats</a></li>
-                    <li class="current"><a href="about.html">About</a></li>
-                    <li><a href="consultations.html">Consultations</a></li>
-                </ul> <!-- s-header__nav-links -->    
-
-                <div class="s-header__nav-bottom">
-
-                    <h6>Booking Request</h6>
-
-                    <div class="s-header__booking">
-                        <div class="s-header__booking-no"><a href="tel:+46737510623">(46) 4673 751 0623</a></div>
-                    </div>
-
-                    <ul class="s-header__nav-social social-list">
-                        <li>
-                            <a href="#0">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M20,3H4C3.447,3,3,3.448,3,4v16c0,0.552,0.447,1,1,1h8.615v-6.96h-2.338v-2.725h2.338v-2c0-2.325,1.42-3.592,3.5-3.592 c0.699-0.002,1.399,0.034,2.095,0.107v2.42h-1.435c-1.128,0-1.348,0.538-1.348,1.325v1.735h2.697l-0.35,2.725h-2.348V21H20 c0.553,0,1-0.448,1-1V4C21,3.448,20.553,3,20,3z"></path></svg>
-                                <span class="u-screen-reader-text">Facebook</span>
-                            </a>
-                        </li>
-                    </ul> 
-                </div> <!-- s-header__nav-bottom -->  
-
-            </nav> <!-- end s-header__nav -->
-
-        </header> <!-- end s-header -->
-
+<!-- # site header 
+================================================== -->
+<header class="s-header">
+    <div class="s-header__block">
+        <div class="s-header__logo">
+            <a class="back-on-track logo" href="index.html">
+                <img src="images/BACK ON TRACK LOGO.svg" alt="Homepage">
+            </a>
+        </div>
+        <div class="s-header__cta">
+            <ul class="s-header__nav-links">
+                <li>
+                    <a href="index.html" class="btn btn--primary s-header__cta-btn">Home</a>
+                </li>
+                <li>
+                    <a href="about.html" class="btn btn--primary s-header__cta-btn">About Us</a>
+                </li>
+                <li>
+                    <a href="retreats.html" class="btn btn--primary s-header__cta-btn">Retreats</a>
+                </li>
+                <li>
+                    <a href="consultations.html" class="btn btn--primary s-header__cta-btn">Consultation</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header> <!-- end s-header -->      
         
         <!-- # main content
         ================================================== -->
         <article class="s-content">
-
             <!-- ## pageheader -->
-            <section class="s-pageheader" style="background-image:url(images/gallery/1/medical.jpg)">
-                <div class="row">
-                    <div class="column xl-16 s-pageheader__content">
-                        <h1 class="page-title">                        
-                            Who We Are
-                        </h1>                    
-                    </div>
+            <section class="s-pageheader" 
+                style="display: flex; align-items: center; background-image: url(images/gallery/1/medical.jpg); 
+                       background-size: cover; background-position: center; background-repeat: no-repeat; height: 100vh;">
+        
+                <!-- Left Text Content -->
+                <div class="column xl-6 s-pageheader__content" 
+                    style="width: 70%; padding-left: 5%; text-align: left; color: white;">
+                    <h1 class="page-title" style="margin-top: 250px;">
+                        Who We Are
+                    </h1>
+                    <h1 class="page-title" style="font-size: 25px;">
+                        Back on Track is led by a multidisciplinary team of healthcare and wellness professionals<br> 
+                        dedicated to improving the lives of individuals <i>with Type 2 Diabetes.</i>
+                    </h1>
                 </div>
+        
+                <!-- Right Image (Just for Alignment) -->
+                <div class="column xl-10" style="width: 50%;"></div>
+        
             </section> <!-- end pageheader -->
+        </article>
+        
+
+
+        <!-- # testimonials
+================================================== -->
+<section id="testimonials" class="s-testimonials">
+
+    <div class="row s-testimonials__content">
+        <div class="column xl-12">
+            <h3 class="s-testimonials__title text-center" style="margin-bottom: 40px;" >Our Team</h3>
+            <div class="s-testimonials__grid" style="display: flex; flex-direction: column; align-items: center;">
+                <div class="s-testimonials__member" style="margin-bottom: 30px; text-align: center;">
+                    <img src="images/avatars/Petros Profile.png" alt="Petros Katsogiannos" class="s-testimonials__avatar" style="width: 250px; height: 250px; border-radius: 50%; object-fit: cover;">
+                    <h4 style="margin-top: 6px; font-size: 30px;">Petros Katsogiannos</h4>
+                    <p style="margin-top: -30px; font-size: 17px;"><b>MD, PhD – Senior Consultant Endocrinologist & Diabetologist</b></p>
+                    <p style="margin-top: -35px; font-size: 17px;">Petros brings extensive experience in treating diabetes and metabolic conditions,<br>
+                         ensuring treatments are tailored to each participant's specific needs.</p>
+                </div> <!-- end s-testimonials__member -->
+
+                <div style="display: flex; justify-content: center; width: 100%;">
+                    <div class="s-testimonials__member" style="margin: 0 20px; text-align: center;">
+                        <img src="images/avatars/Lefteris Profile.jpg" alt="Lefteris Saftis" class="s-testimonials__avatar" style="width: 250px; height: 250px; border-radius: 50%; object-fit: cover;">
+                        <h4 style="margin-top: 6px; font-size: 30px;">Lefteris Saftis, Psychologist</h4>
+                        <p style="margin-top: -30px;font-size: 17px;"><b>Bsc. Psychology, Msc. Psychology, Pgd. Integrative Psychotherapy</b></p>
+                        <p style="margin-top: -40px;font-size: 17px;"><i>Freud Centre for Psychoanalysis</i></p>
+                        <p style="margin-top: -35px; font-size: 18px;">With a deep understanding of the human psyche, Lefteris helps participants explore their emotional landscapes and supports personal growth.</p>
+                    </div> <!-- end s-testimonials__member -->
+
+                    <div class="s-testimonials__member" style="margin: 0 20px; text-align: center;">
+                        <img src="images/avatars/Tzanos profile.jpg" alt="Theodosios Tzanos" class="s-testimonials__avatar" style="width: 250px; height: 250px; border-radius: 50%; object-fit: cover;">
+                        <h4 style="margin-top: 6px; font-size: 30px;">Theodosios Tzanos</h4>
+                        <p style="margin-top: -30px; font-size: 17px;"><b>BEng Mechanical Engineering, Msc Management</b></p>
+                        <p style="margin-top: -40px;font-size: 17px;"><i>Community Builder</i></p>
+                        <p style="margin-top: -35px; font-size: 18px;">With over 15 years of experience in community building, Theodosios empowers individuals and fosters sustainable, active communities.</p>
+                    </div> <!-- end s-testimonials__member -->
+                </div> <!-- end flex container for side by side members -->
+
+            </div> <!-- end s-testimonials__grid -->
+
+        </div> <!-- end column -->
+    </div> <!-- end s-testimonials__content -->
+
+</section> <!-- end s-testimonials -->
+                    </div> <!-- end grid-list-items -->
             
-            <!-- ## pagecontent -->
-            <section class="s-pagecontent pagecontent">
+        <!-- ## pagecontent -->
+<section class="s-pagecontent pagecontent" style=background-color:white;">         
 
-                <div class="row width-narrower pageintro text-center">
-                    <div class="column xl-12">
-                        <p class="lead">
-                            Back on Track is led by a multidisciplinary team of 
-                            healthcare and wellness professionals dedicated to improving 
-                            the lives of individuals with Type 2 Diabetes.
-                        </p>
-                    </div>                       
-                </div> <!-- end pageintro -->              
+    <div class="content-block content-block--stacked" style="text-align: center;">
+        <div class="content-block__media" style="display: flex; justify-content: center;">
+            <figure style="width: 70%; max-width: 900px; margin: -100px 100px -20px;">
+                <img class="rounded-corners" src="images/gallery/1/petros work pic.jpeg"
+                     srcset="images/gallery/1/petros work pic.jpeg 1x, images/gallery/1/petros work pic.jpeg 2x" 
+                     alt="our expertise" 
+                     style="border-radius: 10px; width: 200%; height: 400px; object-fit: cover;">
+            </figure>
+        </div>
+        <div class="content-block__text" style="margin-top: 20px; padding: 0 10%;">
+            <h3>Our Expertise</h3>
+            <p>
+                Each team member brings specialized knowledge in their field,  
+                <br>ensuring that every participant receives comprehensive care.
+                <i><br>Our team includes an endocrinologist, diabetes nurse, psychologist, 
+                    nutritionist, <br>and community-building expert, all working together to create 
+                    a personalized, impactful experience.</br></i></div>
+            </p>
+        </div>
+    </div>
     
-                <div class="row width-narrow content-block content-block--media-right">
-                    <div class="column content-block__text">
-                        <h3>Our Expertise</h3>
-                        <p>
-                        Each team member brings specialized knowledge in their field, 
-                        ensuring that every participant receives comprehensive care. 
-                        <i>Our team includes an endocrinologist, diabetes nurse, psychologist, 
-                            nutritionist, and community-building expert, all working together to create 
-                            a personalized, impactful experience.</i>
-                        </p>
-                    </div>
-                    <div class="column content-block__media">
-                        <figure>
-                            <img src="images/gallery/1/medical2.jpg" 
-                                 srcset="images/gallery/1/medical2.jpg 1x, iimages/gallery/1/medical2.jpg 2x" alt="">
-                        </figure>
-                    </div>
-                </div> <!-- end content-block-->
-    
-                <div class="row width-narrow content-block content-block--media-left">    
-                    <div class="column content-block__text">
-                        <h3>Our Philosophy</h3>
-                        <p>
-                        Physical, mental and emotional well-being are interconnected. 
-                        Our program is built on the pillars of medical science, 
-                        psychological support, and sustainable lifestyle changes, 
-                        </p>
-                        <p>
-                        aiming to empower individuals to manage their health proactively. 
-                        </p>
-                    </div>
-                    <div class="column content-block__media">
-                        <figure>
-                            <img src="images/gallery/1/petros work pic.jpeg" 
-                                 srcset="images/gallery/1/petros work pic.jpeg 1x, images/gallery/1/petros work pic.jpeg 2x" alt="">
-                        </figure>
-                    </div>
-                </div> <!-- end content-block-->
-    
-                <div class="row width-narrow content-block content-block--media-right">
-                    <div class="column content-block__text">                        
-                        <h3>A Curated Holistic Approach</h3>
-                        <p>
-                            Our retreat offers a holistic approach specifically designed for 
-                            individuals with Type 2 Diabetes (T2D). Combining personalized medical consultations, 
-                            psychological support, and lifestyle interventions, this 7-day program 
-                            is set in a beautiful, tranquil environment.
-                        </p>
-                    </div>
-                    <div class="column content-block__media">
-                        <figure>
-                            <img src="images/gallery/1/medical3.jpeg" 
-                                 srcset="images/gallery/1/medical3.jpeg 1x, images/gallery/1/medical3.jpeg 2x" alt="">
-                        </figure>
-                    </div>
-                </div> <!-- end content-block-->
-    
-                <div class="row width-narrow content-block content-block--grey">
-                    <div class="column xl-12">     
-                        <h3>Building Lasting Connections</h3>
-                        <p>
-                            The retreat also fosters a strong sense of community, helping participants build 
-                            connections that extend beyond the retreat. You’ll join a group of like-minded 
-                            individuals who understand the daily challenges of living with T2D and can support 
-                            each other on the journey to better health.
-                    </div>
-                </div> <!-- end content-block -->
+    </div> <!-- end content-block-->
 
-                <div class="row width-narrow content-block">
-                    <div class="column xl-12"> 
-    
-                        <h3>A Tailored Retreat for Health and Relaxation</h3>
-    
-                        <div class="grid-list-items list-items">
-                            <div class="grid-list-items__item list-items__item u-remove-bottom">
-                                <div class="list-items__item-header">
-                                    <h6 class="list-items__item-small-title">Personalized Medical Guidance</h6>
-                                </div>
-                                <p>
-                                    Every participant begins their journey with a thorough online consultation with 
-                                    our medical and psychological team, followed by personalized assessments pre-departure, 
-                                    upon arrival, and post retreat follow up.
-                                </p>
-                            </div>
-                            <div class="grid-list-items__item list-items__item u-remove-bottom">
-                                <div class="list-items__item-header">
-                                    <h6 class="list-items__item-small-title">Psychological and Emotional Support</h6>
-                                </div>
-                                <p> 
-                                    <i>Living with diabetes can often lead to feelings of isolation or emotional distress.</i>
-                                    We provide individual and group therapy sessions to help participants manage 
-                                    the emotional challenges of diabetes, facilitated by our expert psychologist.
+    <div class="row width-narrow content-block content-block--media-left">    
+        <div class="column content-block__text">
+            <h3>Our Philosophy</h3>
+            <p>
+            Physical, mental and emotional well-being are interconnected. 
+            Our program is built on the pillars of medical science, 
+            psychological support, and sustainable lifestyle changes, 
+            aiming to empower individuals to manage their health proactively. 
+            </p>
+        </div>
+        <div class="column content-block__media">
+            <figure>
+                <img class="rounded-corners" src="images/gallery/1/Petros lecture.jpeg" 
+                     srcset="images/gallery/1/petros lecture.jpeg 1x, images/gallery/1/petros lecture.jpeg 2x" alt="" style="border-radius: 15px;">
+            </figure>
+        </div>
+    </div> <!-- end content-block-->
 
-                                </p>
-                            </div>
-                            <div class="grid-list-items__item list-items__item u-remove-bottom">
-                                <div class="list-items__item-header">
-                                    <h6 class="list-items__item-small-title">Nutrition and Cooking Workshops</h6>
-                                </div>
-                                <p>
-                                    Learn how to prepare Mediterranean-inspired meals tailored to the nutritional needs 
-                                    of individuals with diabetes. Our expert nutritionist will guide you through meal 
-                                    planning and interactive cooking classes, <i>ensuring you leave with practical knowledge 
-                                    to support your health goals.</i>
-                                </p>
-                            </div>
-                            <div class="grid-list-items__item list-items__item u-remove-bottom">
-                                <div class="list-items__item-header">
-                                    <h6 class="list-items__item-small-title">Daily Mindfulness and Physical Activities</h6>
-                                </div>
-                                <p>
-                                    <i>We offer a variety of mindfulness practices, including meditation and gentle movement exercises, 
-                                    such as yoga, designed to reduce stress and promote mental clarity.</i> 
-                                    These activities are complemented by physical exercises suitable for all fitness levels.
-                                </p>
-                            </div>
-                        </div> <!--list-items --> 
-
-                    </div> <!-- end column-->
-                </div> <!-- end content-block -->  
-
-            </section> <!-- pagecontent --> 
+    <div class="row width-narrow content-block content-block--media-right">
+        <div class="column content-block__text">                        
+            <h3>A Curated Holistic Approach</h3>
+            <p>
+                Our retreat offers a holistic approach specifically designed for 
+                individuals with Type 2 Diabetes (T2D). Combining personalized medical consultations, 
+                psychological support, and lifestyle interventions, this 7-day program 
+                is set in a beautiful, tranquil environment.
+            </p>
+        </div>
+        <div class="column content-block__media">
+            <figure>
+                <img class="rounded-corners" src="images/gallery/1/pexels-photo-11423202.jpeg" 
+                     srcset="images/gallery/1/holistic approach.jpeg 1x, images/gallery/1/holistic approach.jpeg 2x" alt="" style="border-radius: 15px;">
+            </figure>
+        </div>
+    </div> <!-- end content-block-->
 
         </article> <!-- end main content -->
 
 
-        <!-- # testimonials
-        ================================================== -->
-        <section id="testimonials" class="s-testimonials">
-
-            <div class="row s-testimonials__content">
-                <div class="column xl-12">
-
-                    <h3 class="s-testimonials__title text-center">Our Team</h3>
-    
-                    <div class="swiper-container s-testimonials__slider">    
-                        <div class="swiper-wrapper">
-
-                            <div class="s-testimonials__slide swiper-slide">
-                                <div class="s-testimonials__author">
-                                    <img src="images/gallery/petros-work-pic" alt="Author image" class="s-testimonials__avatar">
-                                    <cite class="s-testimonials__cite">
-                                        Lefteris Saftis, Psychologist
-                                        <span>Bsc. Psychology, Msc. Psychology, 
-                                            Pgd. Integrative Psychotherapy, 
-                                            Freud Centre for Psychoanalysis</span>
-                                    </cite>
-                                </div>
-                                <p>
-                                    With a deep understanding of the human psyche, Lefteris helps participants explore their 
-                                    emotional landscapes and supports both personal growth and emotional healing. 
-                                    His evidence-based practices provide both individual and group therapy sessions, 
-                                    fostering mental and emotional exploration.
-                                </p>
-                            </div> <!-- end s-testimonials__slide -->
-            
-                            <div class="s-testimonials__slide swiper-slide">
-                                <div class="s-testimonials__author">
-                                    <img src="images/gallery/petros-work-pic" alt="Author image" class="s-testimonials__avatar">
-                                    <cite class="s-testimonials__cite">
-                                        Petros Katsogiannos
-                                        <span>MD, PhD – Senior Consultant 
-                                            Endocrinologist & Diabetologist
-                                        </span>
-                                    </cite>
-                                </div>
-                                <p>
-                                    Petros brings extensive experience in treating diabetes and metabolic conditions. 
-                                    He combines the latest research with personalized care plans to help optimize 
-                                    metabolic health.His focus is always on the individual, ensuring treatments 
-                                    are tailored to each participant's specific needs.
-                                </p>
-                            </div> <!-- end s-testimonials__slide -->
-            
-                            <div class="s-testimonials__slide swiper-slide">
-                                <div class="s-testimonials__author">
-                                    <img src="images/gallery/petros-work-pic" alt="Author image" class="s-testimonials__avatar">
-                                    <cite class="s-testimonials__cite">
-                                        Theodosios Tzanos
-                                        <span>BEng Mechanical Engineering, Msc Management - Community Builder                                        </span>
-                                    </cite>
-                                </div>
-                                <p>
-                                    With over 15 years of experience in community building, 
-                                    Theodosios empowers individuals and fosters sustainable, active communities. 
-                                    He is also deeply engaged in mindfulness practices, particularly Vipassana meditation,
-                                     which he incorporates into his approach to wellness and personal growth.
-                                </p>
-                            </div> <!-- end s-testimonials__slide -->
-    
-                        </div> <!-- end swiper-wrapper -->
-    
-                        <div class="swiper-pagination"></div>
-    
-                    </div> <!-- end s-testimonials__slider -->
-    
-                </div> <!-- end column -->
-            </div> <!-- end s-testimonials__content -->
-
-        </section> <!-- end s-testimonials --> 
 
 
-                    </div> <!-- end grid-list-items -->
+<!-- # footer ================================================== -->
+<footer id="footer" class="s-footer" style="padding-top: 250px;">  
 
-                </div>
-            </div> <!-- end s-gallery__inner -->
-        </section> <!-- end s-gallery --> 
+    <div class="row s-footer__main-content">
 
+        <div class="column xl-6 md-12 s-footer__block s-footer__about"> 
+            <div class="s-footer__logo">
+                <a class="logo" href="index.html">
+                    <img src="images/BACK ON TRACK LOGO.svg" style=margin-top:20px; alt="Homepage">
+                </a>
+            </div>  
+            <p>
+                Integrating expert medical care, psychological support, and lifestyle modifications, 
+                all delivered in a peaceful community setting where participants can feel safe and supported.
+            </p>               
+        </div> <!-- end s-footer__about -->
 
-        <!-- # footer 
-        ================================================== -->
-        <footer id="footer" class="s-footer">  
-            
-            <div class="row s-footer__top row-x-center">
-                <div class="column xl-4 lg-6 tab-8 mob-12">
-                    <a href="consultations.html" class="btn btn--primary btn--large u-fullwidth">Book a Consultation</a>
-                </div>
-            </div>
-
-            <div class="row s-footer__main-content">
-
-                <div class="column xl-6 md-12 s-footer__block s-footer__about"> 
-                    <div class="s-footer__logo">
-                        <a class="logo" href="index.html">
-                            <img src="images/BACK ON TRACK LOGO.svg" alt="Homepage">
-                        </a>
-                    </div>  
+        <div class="column xl-6 md-12 s-footer__block s-footer__info">
+            <div class="row">
+                <div class="column xl-6 lg-12" style=margin-top:40px;>
+                    <h5>Location</h5>
                     <p>
-                        Integrating expert medical care, psychological support, and lifestyle modifications, 
-                         all delivered in a peaceful community setting where participants can feel safe and supported.
-                    </p>               
-                </div> <!-- end s-footer__about -->
-
-                <div class="column xl-6 md-12 s-footer__block s-footer__info">
-                    <div class="row">
-                        <div class="column xl-6 lg-12">
-                            <h5>Location</h5>
-                            <p>
-                            Athens, Greece
-                            </p>
-                        </div>
-                        <div class="column xl-6 lg-12">     
-                            <h5>Contacts</h5>
-                            <ul class="link-list">
-                                <li><a href="mailto:#0">backontrack.com</a></li>
-                                <li><a href="tel:+46737510623">(46)737510623</a></li>
-                            </ul> 
-                    </div>                    
-                </div> <!-- end s-footer__info -->
-
-            </div> <!-- end  s-footer__main-content -->                 
-            
-            <div class="row s-footer__bottom">
-                
-                <div class="column xl-6 lg-12">
-                    <ul class="s-footer__social social-list">
-                        <li>
-                            <a href="#0">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M20,3H4C3.447,3,3,3.448,3,4v16c0,0.552,0.447,1,1,1h8.615v-6.96h-2.338v-2.725h2.338v-2c0-2.325,1.42-3.592,3.5-3.592 c0.699-0.002,1.399,0.034,2.095,0.107v2.42h-1.435c-1.128,0-1.348,0.538-1.348,1.325v1.735h2.697l-0.35,2.725h-2.348V21H20 c0.553,0,1-0.448,1-1V4C21,3.448,20.553,3,20,3z"></path></svg>
-                                <span class="u-screen-reader-text">Facebook</span>
-                            </a>
-                        </li>
-
-                    </ul> 
-                </div> <!-- end section-footer__social -->
-
-                <div class="column xl-6 lg-12">
-                    <p class="ss-copyright">
-                        <span>Back on Track 2025</span> 
-                        <span>Design by G. Creatives </a></span>
+                        Aegean Sea Coast, <br> Platamonas, Greece
                     </p>
                 </div>
+                <div class="column xl-6 lg-12" style="margin-left: -5%;">     
+                    <div style="margin-left: -23%;" style="margin-top: 90%">
+                        <h5>Contacts</h5>
+                    </div>
+                    
+                    <ul class="link-list" style="font-size: 18px;">
+                        <li><a href="mailto:info@backontrack-diabetes.com" style="margin-left: -70px; style="margin-right: 70px;"">info@backontrack-diabetes.com</a></li>
+                        <li><a href="https://wa.me/46737510623?text=Hello!%20I%20am%20interested%20in%20the%20Back%20on%20Track%20Diabetes%20Wellness%20Retreat,%20can%20I%20schedule%20a%20consult%3F" style="margin-left: -70px; style="margin-right: 70px;">(46)737510623</a></li>
+                    </ul> 
+                </div>                  
+                <div class="row s-footer__top row-x-center">
+                    <div class="column xl-4 lg-6 tab-8 mob-12" class="s-about__content-btn" style="margin-left: -130px; margin-right: 0px; margin-top: 0px;">
+                    <a href="consultations.html" class="btn btn--stroke btn--medium u-fullwidth" style="margin-top: 0%;">Book A Consultation With Our Diabetes Specialist
+                    </a>
+                </div>  
+            </div> <!-- end s-footer__info -->
 
-            </div> <!-- end section-footer__bottom -->          
+        </div> <!-- end s-footer__main-content -->             
 
-            <div class="ss-go-top">
-                <a class="smoothscroll" title="Back to Top" href="#top">                 
-                    <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m14.523 18.787s4.501-4.505 6.255-6.26c.146-.146.219-.338.219-.53s-.073-.383-.219-.53c-1.753-1.754-6.255-6.258-6.255-6.258-.144-.145-.334-.217-.524-.217-.193 0-.385.074-.532.221-.293.292-.295.766-.004 1.056l4.978 4.978h-14.692c-.414 0-.75.336-.75.75s.336.75.75.75h14.692l-4.979 4.979c-.289.289-.286.762.006 1.054.148.148.341.222.533.222.19 0 .378-.072.522-.215z" fill-rule="nonzero"/></svg>
-                </a>                                
-                <span>Back To Top</span>   
-            </div> <!-- end ss-go-top -->
-            
-        </footer> <!-- end s-footer -->
+    <div class="row s-footer__bottom">
 
-    </div> <!-- end page-wrap -->
+        <div class="column xl-6 lg-12">
+            <ul class="s-footer__social social-list" style="padding-top: -50px;" >
+                <li>
+                    <a href="https://www.facebook.com/share/17qvWDJ1uT/?mibextid=wwXIfr">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M20,3H4C3.447,3,3,3.448,3,4v16c0,0.552,0.447,1,1,1h8.615v-6.96h-2.338v-2.725h2.338v-2c0-2.325,1.42-3.592,3.5-3.592 c0.699-0.002,1.399,0.034,2.095,0.107v2.42h-1.435c-1.128,0-1.348,0.538-1.348,1.325v1.735h2.697l-0.35,2.725h-2.348V21H20 c0.553,0,1-0.448,1-1V4C21,3.448,20.553,3,20,3z"></path></svg>
+                        <span class="u-screen-reader-text">Facebook</span>
+                    </a>
+                </li>
+
+            </ul> 
+        </div> <!-- end section-footer__social -->
+
+        <div class="column xl-6 lg-12" style="padding-top: -50px;">
+            <p class="ss-copyright">
+                <span>Back on Track 2025</span>
+            </p>
+        </div>
+
+    </div> <!-- end section-footer__bottom -->          
+</footer> <!-- end s-footer -->
+
+</div> <!-- end page-wrap -->
+
+
+
+    
 
 
     <!-- Java Script
     ================================================== -->
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const images = document.querySelectorAll('.hero-image');
+            let currentIndex = 0;
+    
+            function showNextImage() {
+                images[currentIndex].classList.remove('active');
+                images[currentIndex].style.opacity = 0;
+    
+                currentIndex = (currentIndex + 1) % images.length;
+    
+                images[currentIndex].classList.add('active');
+                images[currentIndex].style.opacity = 1;
+            }
+    
+            const intervalId = setInterval(showNextImage, 3000);
+    
+            images[currentIndex].classList.add('active');
+            images[currentIndex].style.opacity = 1;
+    
+            images.forEach(image => {
+                image.addEventListener('mouseover', () => clearInterval(intervalId));
+                image.addEventListener('mouseout', () => setInterval(showNextImage, 3000));
+            });
+        });
+    </script>
 
 </body>
 </html>

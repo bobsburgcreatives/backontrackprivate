@@ -46,26 +46,34 @@
     <div id="page" class="s-pagewrap">
 
         <div class="menu-underlay"></div>
-
+       
         <!-- # site header 
-        ================================================== -->
-        <header class="s-header">
-
-            <div class="s-header__block">
-
-                <div class="s-header__logo">
-                    <a class="back on track logo" href="index.html">
-                        <img src="images/BACK ON TRACK LOGO.svg" alt="Homepage">
-                    </a>
-                </div>
-
-                <a class="s-header__menu-toggle" href="#0"><span>Browse</span></a>
-
-                <div class="s-header__cta">
-                    <a href="consultation.html" class="btn btn--primary s-header__cta-btn">Book a Consulation</a>                        
-                </div>
-
-            </div> <!-- end s-header__block -->
+================================================== -->
+<header class="s-header">
+    <div class="s-header__block">
+        <div class="s-header__logo">
+            <a class="back-on-track logo" href="index.html">
+                <img src="images/BACK ON TRACK LOGO.svg" alt="Homepage">
+            </a>
+        </div>
+        <div class="s-header__cta">
+            <ul class="s-header__nav-links">
+                <li>
+                    <a href="index.html" class="btn btn--primary s-header__cta-btn">Home</a>
+                </li>
+                <li>
+                    <a href="about.html" class="btn btn--primary s-header__cta-btn">About Us</a>
+                </li>
+                <li>
+                    <a href="retreats.html" class="btn btn--primary s-header__cta-btn">Retreats</a>
+                </li>
+                <li>
+                    <a href="consultations.html" class="btn btn--primary s-header__cta-btn">Consultation</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header> <!-- end s-header -->
 
             <nav class="s-header__nav">    
 
@@ -124,21 +132,33 @@
 
         </header> <!-- end s-header -->
 
-        
-        <!-- # main content
+                 <!-- # main content
         ================================================== -->
-        <article class="s-content">
-
-            <!-- ## pageheader -->
-            <section class="s-pageheader pageheader" style="background-image:url(images/gallery/1/medical1.jpeg)">
-                <div class="row">
-                    <div class="column xl-12 s-pageheader__content">
-                        <h1 class="page-title">                        
-                            Consultation
-                        </h1>                    
+        <section class="s-section" style="margin-bottom: 15px;">
+            <article class="s-content">
+                <!-- ## pageheader -->
+                <section class="s-pageheader" 
+                    style="display: flex; align-items: center; background-image: url(images/gallery/1/medical1.jpeg); 
+                           background-size: cover; background-position: center; background-repeat: no-repeat; height: 100vh;">
+            
+                    <!-- Left Text Content -->
+                    <div class="column xl-6 s-pageheader__content" 
+                        style="width: 90%; padding-left: 9%; text-align: left; color: white;">
+                        <h1 class="page-title" style="margin-top: 250px; font-size: 70px;">
+                            Schedule a Free Consulation with Us
+                        </h1>
+    
+                        <h1 class="page-title" style="font-size: 25px;">
+                            <b style="color: #ffffff;">Learn how we can help you take the first steps toward renewed well-being.</b>
+                        </h1>
                     </div>
-                </div>
-            </section> 
+            
+                    <!-- Right Image (Just for Alignment) -->
+                    <div class="column xl-10" style="width: 50%;"></div>
+            
+                </section> <!-- end pageheader -->
+            </article>  
+        
             
             <!-- ## pagecontent -->
             <section class="s-pagecontent pagecontent">
@@ -146,7 +166,7 @@
                 <div class="row width-narrower pageintro text-center">
                     <div class="column xl-12">
                         <p class="lead">
-                        (add here))
+                        Add your details below & we'll be in touch shortly!
                         </p>
                     </div>                       
                 </div> <!-- end pageintro -->   
@@ -156,40 +176,21 @@
 
                         <form name="rform" id="rform" class="reservation-form" method="post" action="" autocomplete="off">
                             <fieldset class="row">
-
-                                <div class="column xl-6 tab-12">
-                                    <label for="rname">Name: </label>
-                                    <input type="text" name="rame" id="rname" class="u-fullwidth" placeholder="Enter Your Name" value="">
-                                </div>
-
-                                <div class="column xl-6 tab-12">
-                                    <label for="rphone">Contact Number: </label>
-                                    <input type="tel" name="rphone" id="rphone" class="u-fullwidth" placeholder="Enter Your Contact No." value="">
-                                </div>
-
-                                <div class="column xl-6 tab-12">
-                                    <label for="rdate">Date: </label>
-                                    <input type="text" name="rdate" id="rdate" class="u-fullwidth" placeholder="eg: 8/01/2023" value="">
-                                </div>
-
-                                <div class="column xl-6 tab-12">
-                                    <label for="rparty-size">addhere :</label>
-                                    <input type="number" name="rparty-size" id="rparty-size" class="u-fullwidth" placeholder="eg: type (?)" value="">
-                                </div>
-
-                                <div class="column xl-12 message u-add-bottom">
-                                    <label for="radd-info">Additional Information: </label>
-                                    <textarea name="radd-info" id="radd-info" class="u-fullwidth" placeholder="Type your additional info here"></textarea>
-                                </div>
                                
-                                <div class="rform__bottom column xl-12">
-                                    <div class="row">
-                                        <div class="column xl-6 tab-12">
-                                            <label class="rcheckbox u-add-bottom">
-                                                <input type="checkbox">
-                                                <span class="label-text">Add any kind of mandatory acknowledgement that customers are required to agree to here.</span>
-                                            </label>
-                                        </div>
+                                <form action="https://formspree.io/f/mqaergbr" method="POST">
+                                    <label for="name">Name:</label>
+                                    <input type="text" id="name" name="name" required>
+                                    
+                                
+                                    <label for="email">Email:</label>
+                                    <input type="email" id="email" name="email" required>
+                                
+                                    <label for="message">Message:</label>
+                                    <textarea id="message" name="message" required></textarea>
+                                
+                                    <button type="submit">Send</button>
+                                </form>
+                                
         
                                         <div class="column xl-6 tab-12">
                                             <input name="submit" id="submit" class="btn btn--primary btn-wide btn--large u-fullwidth" value="Submit for Consultation" type="submit">
@@ -202,149 +203,117 @@
                     </div>
                 </div> <!-- end content-block -->
 
-                <div class="row width-narrower row-x-center content-block content-block--grey cta-block">
-                    <div class="column xl-10 mob-12">  
-                        <h3>Book with addhere</h3>
-                        <p class="attention-getter">
-                        add here  <a href="https://www.addhere.com/" target="_blank">Consultations</a>. 
-                        Simply click the button below to secure your (free?) consultation in just a few easy steps.
-                        </p>
-                        <a href="https://www.addhere.com/" target="_blank" class="btn btn--primary u-fullwidth">Book a Consulation</a>
-                    </div>
-                </div> <!-- end content-block -->
 
             </section> <!-- pagecontent --> 
 
         </article> <!-- end main content -->
 
 
-        <!-- # gallery
-        ================================================== -->
-        <section id="gallery" class="s-gallery">
-            <div class="row s-gallery__inner">
-                <div class="column xl-12">
+<!-- # footer ================================================== -->
+<footer id="footer" class="s-footer" style="padding-top: 250px;">  
 
-                    <div class="gallery-items grid-list-items">
-                        <div class="gallery-items__item grid-list-items__item">
-                            <a href="images/gallery/1/medical.jpg" class="gallery-items__item-thumb glightbox">
-                                <img src="images/gallery/1/medical.jpg" 
-                                    srcset="images/gallery/1/medical.jpg 1x, 
-                                            images/gallery/1/medical.jpg 2x" alt="">
-                            </a>
-                        </div> <!-- end gallery-items__item-->
-            
-                        <div class="gallery-items__item grid-list-items__item">
-                            <a href="images/gallery/1/medical.jpg" class="gallery-items__item-thumb glightbox">
-                                <img src="images/gallery/1/medical.jpg" 
-                                    srcset="images/gallery/1/medical.jpg 1x, 
-                                            images/gallery/1/medical.jpg 2x" alt="">
-                            </a>
-                        </div> <!-- end gallery-items__item -->
-            
-                        <div class="gallery-items__item grid-list-items__item">
-                            <a href="images/gallery/1/medical.jpg" class="gallery-items__item-thumb glightbox">
-                                <img src="images/gallery/1/medical.jpg" 
-                                    srcset="images/gallery/1/medical.jpg 1x, 
-                                            images/gallery/1/medical.jpg 2x" alt="">
-                            </a>
-                        </div> <!-- end gallery-items__item -->
-            
-                        <div class="gallery-items__item grid-list-items__item">
-                            <a href="images/gallery/1/medical.jpg" class="gallery-items__item-thumb glightbox">
-                                <img src="images/gallery/1/medical.jpg" 
-                                    srcset="images/gallery/1/medical.jpg 1x, 
-                                            images/gallery/1/medical.jpg 2x" alt="">
-                            </a>
-                        </div> <!-- end gallery-items__item -->
-                    </div> <!-- end grid-list-items -->
+    <div class="row s-footer__main-content">
 
-                </div>
-            </div> <!-- end s-gallery__inner -->
-        </section> <!-- end s-gallery --> 
+        <div class="column xl-6 md-12 s-footer__block s-footer__about"> 
+            <div class="s-footer__logo">
+                <a class="logo" href="index.html">
+                    <img src="images/BACK ON TRACK LOGO.svg" style=margin-top:20px; alt="Homepage">
+                </a>
+            </div>  
+            <p>
+                Integrating expert medical care, psychological support, and lifestyle modifications, 
+                all delivered in a peaceful community setting where participants can feel safe and supported.
+            </p>               
+        </div> <!-- end s-footer__about -->
 
-
-        <!-- # footer 
-        ================================================== -->
-        <footer id="footer" class="s-footer">  
-            
-            <div class="row s-footer__top row-x-center">
-                <div class="column xl-4 lg-6 tab-8 mob-12">
-                    <a href="consultation.html" class="btn btn--primary btn--large u-fullwidth">Book a Consultation</a>
-                </div>
-            </div>
-
-            <div class="row s-footer__main-content">
-
-                <div class="column xl-6 md-12 s-footer__block s-footer__about"> 
-                    <div class="s-footer__logo">
-                        <a class="logo" href="index.html">
-                            <img src="images/BACK ON TRACK LOGO.svg" alt="Homepage">
-                        </a>
-                    </div>  
+        <div class="column xl-6 md-12 s-footer__block s-footer__info">
+            <div class="row">
+                <div class="column xl-6 lg-12" style=margin-top:40px;>
+                    <h5>Location</h5>
                     <p>
-                        Integrating expert medical care, psychological support, and lifestyle modifications, 
-                        all delivered in a peaceful community setting where participants can feel safe and supported.
-                    </p>               
-                </div> <!-- end s-footer__about -->
-
-                <div class="column xl-6 md-12 s-footer__block s-footer__info">
-                    <div class="row">
-                        <div class="column xl-6 lg-12">
-                            <h5>Location</h5>
-                            <p>
-                            Athens, Greece
-                            </p>
-                        </div>
-                        <div class="column xl-6 lg-12">     
-                            <h5>Contacts</h5>
-                            <ul class="link-list">
-                                <li><a href="mailto:#0">backontrack.com</a></li>
-                                <li><a href="tel:+46737510623">(46)737510623</a></li>
-                            </ul> 
-                    </div>                    
-                </div> <!-- end s-footer__info -->
-
-            </div> <!-- end  s-footer__main-content -->                 
-            
-            <div class="row s-footer__bottom">
-                
-                <div class="column xl-6 lg-12">
-                    <ul class="s-footer__social social-list">
-                        <li>
-                            <a href="#0">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M20,3H4C3.447,3,3,3.448,3,4v16c0,0.552,0.447,1,1,1h8.615v-6.96h-2.338v-2.725h2.338v-2c0-2.325,1.42-3.592,3.5-3.592 c0.699-0.002,1.399,0.034,2.095,0.107v2.42h-1.435c-1.128,0-1.348,0.538-1.348,1.325v1.735h2.697l-0.35,2.725h-2.348V21H20 c0.553,0,1-0.448,1-1V4C21,3.448,20.553,3,20,3z"></path></svg>
-                                <span class="u-screen-reader-text">Facebook</span>
-                            </a>
-                        </li>
-
-                    </ul> 
-                </div> <!-- end section-footer__social -->
-
-                <div class="column xl-6 lg-12">
-                    <p class="ss-copyright">
-                        <span>Back on Track 2025</span> 
-                        <span>Design by G. Creatives </a></span>
+                        Aegean Sea Coast, <br> Platamonas, Greece
                     </p>
                 </div>
+                <div class="column xl-6 lg-12" style="margin-left: -5%;">     
+                    <div style="margin-left: -23%;" style="margin-top: 90%">
+                        <h5>Contacts</h5>
+                    </div>
+                    
+                    <ul class="link-list" style="font-size: 18px;">
+                        <li><a href="mailto:info@backontrack-diabetes.com" style="margin-left: -70px; style="margin-right: 70px;"">info@backontrack-diabetes.com</a></li>
+                        <li><a href="https://wa.me/46737510623?text=Hello!%20I%20am%20interested%20in%20the%20Back%20on%20Track%20Diabetes%20Wellness%20Retreat,%20can%20I%20schedule%20a%20consult%3F" style="margin-left: -70px; style="margin-right: 70px;">(46)737510623</a></li>
+                    </ul> 
+                </div>                  
+                <div class="row s-footer__top row-x-center">
+                    <div class="column xl-4 lg-6 tab-8 mob-12" class="s-about__content-btn" style="margin-left: -130px; margin-right: 0px; margin-top: 0px;">
+                    <a href="consultations.html" class="btn btn--stroke btn--medium u-fullwidth" style="margin-top: 0%;">Book A Consultation With Our Diabetes Specialist
+                    </a>
+                </div>  
+            </div> <!-- end s-footer__info -->
 
-            </div> <!-- end section-footer__bottom -->          
+        </div> <!-- end s-footer__main-content -->             
 
-            <div class="ss-go-top">
-                <a class="smoothscroll" title="Back to Top" href="#top">                 
-                    <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m14.523 18.787s4.501-4.505 6.255-6.26c.146-.146.219-.338.219-.53s-.073-.383-.219-.53c-1.753-1.754-6.255-6.258-6.255-6.258-.144-.145-.334-.217-.524-.217-.193 0-.385.074-.532.221-.293.292-.295.766-.004 1.056l4.978 4.978h-14.692c-.414 0-.75.336-.75.75s.336.75.75.75h14.692l-4.979 4.979c-.289.289-.286.762.006 1.054.148.148.341.222.533.222.19 0 .378-.072.522-.215z" fill-rule="nonzero"/></svg>
-                </a>                                
-                <span>Back To Top</span>   
-            </div> <!-- end ss-go-top -->
-            
-        </footer> <!-- end s-footer -->
+    <div class="row s-footer__bottom">
 
-    </div> <!-- end page-wrap -->
+        <div class="column xl-6 lg-12">
+            <ul class="s-footer__social social-list" style="padding-top: -50px;" >
+                <li>
+                    <a href="https://www.facebook.com/share/17qvWDJ1uT/?mibextid=wwXIfr">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M20,3H4C3.447,3,3,3.448,3,4v16c0,0.552,0.447,1,1,1h8.615v-6.96h-2.338v-2.725h2.338v-2c0-2.325,1.42-3.592,3.5-3.592 c0.699-0.002,1.399,0.034,2.095,0.107v2.42h-1.435c-1.128,0-1.348,0.538-1.348,1.325v1.735h2.697l-0.35,2.725h-2.348V21H20 c0.553,0,1-0.448,1-1V4C21,3.448,20.553,3,20,3z"></path></svg>
+                        <span class="u-screen-reader-text">Facebook</span>
+                    </a>
+                </li>
+
+            </ul> 
+        </div> <!-- end section-footer__social -->
+
+        <div class="column xl-6 lg-12" style="padding-top: -50px;">
+            <p class="ss-copyright">
+                <span>Back on Track 2025</span>
+            </p>
+        </div>
+
+    </div> <!-- end section-footer__bottom -->          
+</footer> <!-- end s-footer -->
+
+</div> <!-- end page-wrap -->
+
+
+
+    
 
 
     <!-- Java Script
     ================================================== -->
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const images = document.querySelectorAll('.hero-image');
+            let currentIndex = 0;
+    
+            function showNextImage() {
+                images[currentIndex].classList.remove('active');
+                images[currentIndex].style.opacity = 0;
+    
+                currentIndex = (currentIndex + 1) % images.length;
+    
+                images[currentIndex].classList.add('active');
+                images[currentIndex].style.opacity = 1;
+            }
+    
+            const intervalId = setInterval(showNextImage, 3000);
+    
+            images[currentIndex].classList.add('active');
+            images[currentIndex].style.opacity = 1;
+    
+            images.forEach(image => {
+                image.addEventListener('mouseover', () => clearInterval(intervalId));
+                image.addEventListener('mouseout', () => setInterval(showNextImage, 3000));
+            });
+        });
+    </script>
 
 </body>
 </html>
