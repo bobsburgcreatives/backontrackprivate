@@ -198,7 +198,7 @@
     /* buttons
    */
     --color-btn                   : var(--color-gray-5);
-    --color-btn-text              : #41bca5;
+    --color-btn-text              : #ffffff;
     --color-btn-hover             : var(--color-gray-6);
     --color-btn-hover-text        : var(--color-text);
     --color-btn-primary           : var(--color-1);
@@ -2169,8 +2169,8 @@ select:-webkit-autofill:focus {
  input[type=submit]:hover,
  input[type=reset]:hover,
  input[type=button]:hover {
-     background-color: #41BCA5;
-     border-color    : #41BCA5;
+     background-color: #ffffff;
+     border-color    : #ffffff;
      color           : #ffffff;
      outline         : 0;
  }
@@ -2241,8 +2241,8 @@ select:-webkit-autofill:focus {
  button.btn--stroke:focus,
  .btn--stroke:hover,
  button.btn--stroke:hover {
-     background: #278775, !important;
-     border    : 2px solid #278775;
+     background: #ffffff, !important;
+     border    : 2px solid #ffffff;
      color     : #d3dedc;
  } 
  
@@ -2706,7 +2706,7 @@ td:last-child {
 }
 
 .stats-tabs li a:hover {
-    color: var(--color-1);
+    color: var(#ffffff);
 }
 
 .stats-tabs li a em {
@@ -2717,7 +2717,7 @@ td:last-child {
     line-height: var(--vspace-0_5);
     font-weight: 400;
     font-style : normal;
-    color      : var(--color-text-light);
+    color      : var(#ffffff);
 }
 
 
@@ -3076,7 +3076,7 @@ body.menu-is-open {
  * ## logo (centered)
  * -------------------------------------------------------------------- */
 .s-header__logo {
-    z-index : 10; /* Ensure it is above everything else */
+    z-index : 999; /* Ensure it is above everything else */
     position: absolute; /* Use absolute positioning to center */
     left    : 50%;
     transform: translateX(-50%); /* Center horizontally */
@@ -3088,7 +3088,7 @@ body.menu-is-open {
     padding: 0;
     outline: 0;
     border: none;
-    z-index: 10; /* Ensure it stays above */
+    z-index: 20; 
 }
 
 .s-header__logo img {
@@ -4561,10 +4561,11 @@ footer {
 .s-footer a:hover,
 .s-footer .btn:hover,
 .s-footer__top .link-list a:hover {
-    background-color: #fff;
+    background-color: #ffffff00;
     color: #41C2A9;
     transform: scale(1.05); /* Enlarge on hover */
 }
+
 
 /* Style for Book a Consultation button */
 .s-footer__top .btn {
@@ -4585,7 +4586,7 @@ footer {
 }
 
 .s-footer__top .btn:hover {
-    background-color: #ffffff;
+    background-color: #ffffff00;
     color: #41C2A9;
     transform: scale(1.05); /* Enlarge button on hover */
 }
