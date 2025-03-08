@@ -25,6 +25,136 @@
     <link rel="icon" type="image/png" sizes="16x16" href="ellipse 45.svg">
     <link rel="manifest" href="site.webmanifest">
 
+    <!-- Mobile-specific styles
+    ================================================== -->
+    <style>
+        @media screen and (max-width: 768px) {
+            .s-header__nav-links {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .s-header__block {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .s-header__cta {
+                width: 100%;
+                margin-top: 10px;
+            }
+            
+            .s-header__nav-links li {
+                margin-bottom: 5px;
+                width: 100%;
+            }
+            
+            .s-header__cta-btn {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .s-pageheader {
+                flex-direction: column;
+                padding: 20px;
+                height: auto !important;
+                min-height: 80vh;
+            }
+            
+            .s-pageheader__content {
+                width: 100% !important;
+                padding: 20px !important;
+                text-align: center !important;
+            }
+            
+            .page-title {
+                margin-top: 50px !important;
+                font-size: 32px !important;
+            }
+            
+            .page-title[style*="font-size: 25px"] {
+                font-size: 20px !important;
+            }
+            
+            .column {
+                width: 100% !important;
+                padding: 0 15px;
+            }
+            
+            .grid-list-items {
+                flex-direction: column !important;
+            }
+            
+            figure img {
+                width: 100% !important;
+                height: auto !important;
+                min-height: 200px !important;
+            }
+            
+            .menu-list {
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                padding: 0 10px;
+            }
+            
+            .width-narrower {
+                padding: 0 15px !important;
+            }
+            
+            .image-gallery img {
+                width: 100% !important;
+                margin-bottom: 10px;
+            }
+            
+            .image-container {
+                margin: 0 !important;
+                padding: 10px 0;
+            }
+            
+            .table-responsive {
+                overflow-x: auto;
+            }
+            
+            .s-footer__block {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            
+            .s-footer__logo {
+                display: flex;
+                justify-content: center;
+            }
+            
+            .s-footer__social {
+                justify-content: center;
+            }
+            
+            .s-footer__copyright {
+                text-align: center;
+            }
+            
+            .link-list {
+                padding-left: 0 !important;
+            }
+            
+            .link-list li a {
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+            }
+            
+            .s-about__content-btn {
+                width: 100% !important;
+                margin: 0 !important;
+                padding: 10px 15px;
+            }
+            
+            .cta-block {
+                padding: 20px 15px !important;
+            }
+        }
+    </style>
+
 </head>
 
 
@@ -173,8 +303,8 @@
                     
                                     <div class="column" style="flex: 1;">
                                         <figure>
-                                            <img src="images/gallery/pic 2.png"  
-                                                srcset="images/gallery/1/diabetes retreat.png 1x, images/gallery/1/Petros lecture.jpeg 2x" alt="" 
+                                            <img src="images/gallery/1/Petros lecture.jpeg"  
+                                                srcset="images/gallery/1/Petros lecture.jpeg 1x, images/gallery/1/Petros lecture.jpeg 2x" alt="" 
                                                 style="width: 100%; height: 300px; object-fit: cover; border-radius: 15px;">
                                         </figure>
                                         <div class="text-block" style="max-width: 100%; margin-top: 10px;">
@@ -182,6 +312,7 @@
                                             <p> 
                                                 <i>Living with diabetes can often lead to feelings of isolation or emotional distress.</i>
                                                 Individual psychotherapy sessions with a combination of groups psychotherapeutic interventions. 
+
                                             </p>
                                         </div>
                                     </div>
@@ -192,13 +323,8 @@
                     
                                     <div class="column" style="flex: 1;">
                                         <figure>
-                                            <img src="images/gallery/cooking3.jpg"  
-                                                srcset="images/gallery/cooking.jpg 1x, images/gallery/1/215.jpg 2x" alt="" 
-                                                style="width: 100%; height: 450px; object-fit: cover; border-radius: 15px;">
-                                        </figure>
-                                        <figure>
-                                            <img src="images/gallery/cooking3.jpg"  
-                                                srcset="images/gallery/cooking.jpg 1x, images/gallery/1/215.jpg 2x" alt="" 
+                                            <img src="images/gallery/1/215.jpg"  
+                                                srcset="images/gallery/1/215.jpg 1x, images/gallery/1/215.jpg 2x" alt="" 
                                                 style="width: 100%; height: 450px; object-fit: cover; border-radius: 15px;">
                                         </figure>
                                         <div class="text-block" style="max-width: 100%; margin-top: 10px;">
@@ -248,7 +374,7 @@
                                                 <p style="max-width: 90%; margin: 0 auto;">
                                                     The retreat also fosters a strong sense of community, helping participants 
                                                     build connections that extend beyond the retreat. 
-                                                    You’ll join a group of like-minded individuals who understand the daily challenges of 
+                                                    You'll join a group of like-minded individuals who understand the daily challenges of 
                                                     living with T2D and <i>can support each other on the journey to better health</i>.
                                                 </p>
                                             </div>
@@ -264,7 +390,7 @@
                                             <h6 class="list-items__item-small-title">Serene Natural Surroundings</h6>
                                             <p>
                                                 Experience a tranquil escape in the breathtaking landscapes of Platamonas, 
-                                                where nature’s beauty supports healing and relaxation, fostering an optimal 
+                                                where nature's beauty supports healing and relaxation, fostering an optimal 
                                                 environment for well-being.
                                             </p>
                                         </div>
@@ -323,6 +449,13 @@
                                                         border-radius: 10px;  /* Rounded corners */
                                                         object-fit: cover;  /* Keeps the aspect ratio and fills the space */
                                                     }
+                                                    
+                                                    @media (max-width: 768px) {
+                                                        .image-gallery img {
+                                                            width: 100%;
+                                                            margin-bottom: 10px;
+                                                        }
+                                                    }
                                                 </style>
                                             </head>
                                             <body>
@@ -360,6 +493,13 @@
                                                         width: 22%;  /* Adjust size */
                                                         border-radius: 10px;  /* Rounded corners */
                                                         object-fit: cover;  /* Keeps the aspect ratio and fills the space */                                                    }
+                                                    
+                                                    @media (max-width: 768px) {
+                                                        .image-gallery img {
+                                                            width: 100%;
+                                                            margin-bottom: 10px;
+                                                        }
+                                                    }
                                                 </style>
                                             </head>
                                             <body>

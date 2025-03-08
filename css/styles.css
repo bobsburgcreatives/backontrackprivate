@@ -211,9 +211,9 @@
     --color-btn-stroke-hover-text : var(--color-white);
     /* preloader
    */
-    --color-preloader-bg          : var(--color-gray-19);
-    --color-loader                : var(--color-gray-10);
-    --color-loader-light          : var(--color-gray-16);
+    --color-preloader-bg          : #000000;
+    --color-loader                : #ffffff;
+    --color-loader-light          : #ffffff; 
     /* others
    */
     --color-body-bg               : var(--color-gray-1);
