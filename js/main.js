@@ -1,5 +1,5 @@
 /* ===================================================================
- * Maillard 1.0.0 - Main JS
+ * BB Creatives / Sofia 1.0.0 - Main JS
  *
  * ------------------------------------------------------------------- */
 
@@ -7,67 +7,77 @@
 
     'use strict';
 
+/* preloader
+* -------------------------------------------------- */
+const ssPreloader = function() {
+    const html = document.querySelector('html');
+    const siteBody = document.querySelector('body');
+    const preloader = document.querySelector('#preloader');
+    if (!preloader) return;
 
-   /* preloader
-    * -------------------------------------------------- */
-    const ssPreloader = function() {
-
-        const siteBody = document.querySelector('body');
-        const preloader = document.querySelector('#preloader');
-        if (!preloader) return;
-
-        html.classList.add('ss-preload');
+    html.classList.add('ss-preload');
+    
+    window.addEventListener('load', function() {
+        html.classList.remove('ss-preload');
+        html.classList.add('ss-loaded');
         
-        window.addEventListener('load', function() {
-            html.classList.remove('ss-preload');
-            html.classList.add('ss-loaded');
-            
-            preloader.addEventListener('transitionend', function afterTransition(e) {
-                if (e.target.matches('#preloader'))  {
-                    siteBody.classList.add('ss-show');
-                    e.target.style.display = 'none';
-                    preloader.removeEventListener(e.type, afterTransition);
-                }
-            });
+        preloader.addEventListener('transitionend', function afterTransition(e) {
+            if (e.target.matches('#preloader'))  {
+                siteBody.classList.add('ss-show');
+                e.target.style.display = 'none';
+                preloader.removeEventListener(e.type, afterTransition);
+            }
         });
+    });
+}; // end ssPreloader
 
-    }; // end ssPreloader
 
+/* offcanvas nav menu
+* ------------------------------------------------------ */
+const ssOffCanvas = function() {
+    const menuToggle = document.querySelector('.s-header__menu-toggle');
+    const nav = document.querySelector('.s-header__nav');
+    const closeButton = document.querySelector('.s-header__nav-close');
+    const menuUnderlay = document.querySelector('.menu-underlay');
+    const siteBody = document.querySelector('body');
 
-   /* offcanvas nav menu
-    * ------------------------------------------------------ */
-    const ssOffCanvas = function() {
+    if (!(menuToggle && nav)) return;
 
-        const menuToggle  = document.querySelector('.s-header__menu-toggle');
-        const nav         = document.querySelector('.s-header__nav');
-        const closeButton = document.querySelector('.s-header__nav-close-btn');
-        const siteBody    = document.querySelector('body');
+    menuToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        siteBody.classList.add('menu-is-open');
+    });
 
-        if (!(menuToggle && nav)) return;
+    closeButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
 
-        menuToggle.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            siteBody.classList.add('menu-is-open');
-        });
+        if (siteBody.classList.contains('menu-is-open')) {
+            siteBody.classList.remove('menu-is-open');
+        }
+    });
 
-        closeButton.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
+    menuUnderlay.addEventListener('click', function(e) {
+        if (siteBody.classList.contains('menu-is-open')) {
+            siteBody.classList.remove('menu-is-open');
+        }
+    });
 
+    siteBody.addEventListener('click', function(e) {
+        if(!(e.target.matches('.s-header__nav, .s-header__nav-links a'))) {
             if (siteBody.classList.contains('menu-is-open')) {
                 siteBody.classList.remove('menu-is-open');
             }
-        });
+        }
+    });
+}; // end ssOffcanvas
 
-        siteBody.addEventListener('click', function(e) {
-            if(!(e.target.matches('.s-header__nav, .s-header__nav-links a'))) {
-                closeButton.dispatchEvent(new Event('click'));
-            }
-        });
-
-    }; // end ssOffcanvas   
-
+// Initialize functions when DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+    ssPreloader();
+    ssOffCanvas();
+});
 
    /* glightbox
     * ------------------------------------------------------ */ 
