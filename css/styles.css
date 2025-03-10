@@ -95,7 +95,7 @@
     .bricolage-grotesque-<uniquifier> {
       font-family: "Bricolage Grotesque", serif;
       font-optical-sizing: auto;
-      font-weight: <weight>; 
+      font-weight: <weight>;
       font-style: normal;
       font-variation-settings:
         "wdth" 100;
@@ -127,18 +127,18 @@
 
   /* theme color variations
    */
-    --color-1-lightest            : #c6d5d2;
+    --color-1-lightest            : hsla(12, 75%, 75%, 1);
     --color-1-lighter             : #98f7e6;
-    --color-1-light               : #42BEA7;
+    --color-1-light               : #61c9b6;
     --color-1-dark                : #26a089;
     --color-1-darker              : #217767;
-    --color-1-darkest             : #1E225B;
+    --color-1-darkest             : #1E564B;
 
     --color-2-lighter             : hsla(28, 25%, 96%, 1);
-    --color-2-light               : rgb(210, 214, 228);
-    --color-2-dark                : rgb(147, 174, 190);
-    --color-2-darker              : rgb(115, 129, 171);
-    --color-2-darkest             : rgb(69, 76, 115);
+    --color-2-light               : hsla(28, 25%, 86%, 1);
+    --color-2-dark                : hsla(28, 25%, 66%, 1);
+    --color-2-darker              : hsla(28, 25%, 56%, 1);
+    --color-2-darkest             : hsla(28, 25%, 36%, 1);
 
     --color-3-lighter             : hsla(240, 8%, 58%, 1);
     --color-3-light               : hsla(240, 8%, 48%, 1);
@@ -154,9 +154,9 @@
     --color-info                  : hsla(205, 82%, 91%, 1);
     --color-notice                : #217767;
     --color-error-content         : #41BCA5;
-    --color-success-content       : rgb(65, 51, 92);
+    --color-success-content       : hsla(76, 29%, 28%, 1);
     --color-info-content          : hsla(205, 32%, 31%, 1);
-    --color-notice-content        : rgb(58, 54, 99);
+    --color-notice-content        : hsla(51, 30%, 30%, 1);
 
   /* neutrals
    * generated using 
@@ -199,21 +199,21 @@
    */
     --color-btn                   : var(--color-gray-5);
     --color-btn-text              : #ffffff;
-    --color-btn-hover             : var(--color-gray-6);
+    --color-btn-hover             : #41BCA5;
     --color-btn-hover-text        : var(--color-text);
     --color-btn-primary           : var(--color-1);
     --color-btn-primary-text      : var(--color-white);
     --color-btn-primary-hover     : var(--color-1-light);
-    --color-btn-primary-hover-text: var(--color-white);
+    --color-btn-primary-hover-text: #41BCA5;
     --color-btn-stroke            : var(--color-text);
     --color-btn-stroke-text       : var(--color-text);
     --color-btn-stroke-hover      : var(--color-text);
-    --color-btn-stroke-hover-text : var(--color-white);
+    --color-btn-stroke-hover-text : #41BCA5;
     /* preloader
    */
-    --color-preloader-bg          : #000000;
-    --color-loader                : #ffffff;
-    --color-loader-light          : #ffffff; 
+    --color-preloader-bg          : var(--color-gray-19);
+    --color-loader                : var(--color-gray-10);
+    --color-loader-light          : var(--color-gray-16);
     /* others
    */
     --color-body-bg               : var(--color-gray-1);
@@ -230,7 +230,7 @@
    * base font size: 24px 
    * vertical space unit : 34px
    */
-    --base-size       : 62.5%; 
+    --base-size       : 62.5%;
     --multiplier      : 1;
     --base-font-size  : calc(2.4rem * var(--multiplier));
     --space           : calc(3.4rem * var(--multiplier));
@@ -308,6 +308,102 @@
     --vspace-btn      : var(--vspace-1_75);
 }
 
+<style>
+@media screen and (max-width: 768px) {
+    /* Apply line-height of 0.8 for mobile */
+    body {
+        line-height: 0.8;
+    }
+
+    /* Ensure text elements are justified */
+    .s-header__nav-links li a,
+    .s-header__cta-btn,
+    .s-pageheader .page-title,
+    .s-pageheader__content {
+        text-align: justify;
+    }
+
+    /* Adjust font sizes for mobile */
+    .s-header__nav-links li a {
+        font-size: 16px;
+        padding: 8px 0;
+    }
+
+    .s-header__cta-btn {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+
+    .s-pageheader .page-title {
+        font-size: clamp(var(--text-xxl), 8vw, var(--text-huge-1));
+    }
+
+    /* Ensure other elements are properly spaced and aligned */
+    .s-header__block {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 20px;
+    }
+
+    .s-header__logo {
+        position: static;
+        left: auto;
+        transform: none;
+        margin-bottom: 15px;
+        margin-left: 0;
+    }
+
+    .s-header__logo img {
+        width: 12rem;
+    }
+
+    .s-header__cta {
+        position: static;
+        display: block;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .s-header__nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding-left: 0;
+    }
+
+    .s-header__nav-links li {
+        margin-right: 0;
+        margin-top: 30px;
+    }
+
+    .s-header__menu-toggle {
+        display: block;
+        margin-left: 0;
+        top: 20px;
+    }
+
+    .s-header__nav {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .s-header__nav-social {
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    .s-pageheader {
+        padding-top: var(--vspace-4);
+        padding-bottom: var(--vspace-1_5);
+    }
+
+    .s-pageheader .page-title::before {
+        margin-top: 10px;
+    }
+}
+</style>
+
+<style>
 /* on mobile devices below 600px, change the value of '--multiplier' 
  * to adjust the values of base font size and vertical space unit.
  */
@@ -316,6 +412,33 @@
         --multiplier: .9412;
     }
 }
+</style>
+
+<style>
+/* Mobile-first styles */
+body {
+    font-size: 16px;
+    padding: 10px;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Desktop overrides */
+  @media only screen and (min-width: 768px) {
+    body {
+      font-size: 18px;
+      padding: 20px;
+    }
+  
+    img {
+      max-width: 50%;
+    }
+  }
+  
+  </style>
 
 /* ------------------------------------------------------------------- 
  * ## grid variables
@@ -339,6 +462,7 @@
     --gutter            : 2.6rem;
 }
 
+<style>
 /* on large screen devices
  */
 @media screen and (max-width: 1000px) {
@@ -354,6 +478,18 @@
         --gutter: 1rem;
     }
 }
+</style>
+
+<style>
+  @media only screen and (max-width: 600px) {
+    img {
+      max-width: 50%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+</style>
 
 
 /* ====================================================================
@@ -735,260 +871,255 @@ table {
     }
 }
 
-/* --------------------------------------------------------------------
- * ## medium devices (801px to 1000px)
- * -------------------------------------------------------------------- */
+/* -------------------------------------------------------------------- */
+/* Your existing grid system (do not modify this section) */
+/* -------------------------------------------------------------------- */
+
+/* Medium devices (801px to 1000px) */
 @media screen and (max-width: 1000px) {
-    .md-1 {
-        flex : none;
-        width: 8.3333333333%;
-    }
-
-    .md-2 {
-        flex : none;
-        width: 16.6666666667%;
-    }
-
-    .md-3 {
-        flex : none;
-        width: 25%;
-    }
-
-    .md-4 {
-        flex : none;
-        width: 33.3333333333%;
-    }
-
-    .md-5 {
-        flex : none;
-        width: 41.6666666667%;
-    }
-
-    .md-6 {
-        flex : none;
-        width: 50%;
-    }
-
-    .md-7 {
-        flex : none;
-        width: 58.3333333333%;
-    }
-
-    .md-8 {
-        flex : none;
-        width: 66.6666666667%;
-    }
-
-    .md-9 {
-        flex : none;
-        width: 75%;
-    }
-
-    .md-10 {
-        flex : none;
-        width: 83.3333333333%;
-    }
-
-    .md-11 {
-        flex : none;
-        width: 91.6666666667%;
-    }
-
-    .md-12 {
-        flex : none;
-        width: 100%;
-    }
+    .md-1 { flex: none; width: 8.3333333333%; }
+    .md-2 { flex: none; width: 16.6666666667%; }
+    .md-3 { flex: none; width: 25%; }
+    .md-4 { flex: none; width: 33.3333333333%; }
+    .md-5 { flex: none; width: 41.6666666667%; }
+    .md-6 { flex: none; width: 50%; }
+    .md-7 { flex: none; width: 58.3333333333%; }
+    .md-8 { flex: none; width: 66.6666666667%; }
+    .md-9 { flex: none; width: 75%; }
+    .md-10 { flex: none; width: 83.3333333333%; }
+    .md-11 { flex: none; width: 91.6666666667%; }
+    .md-12 { flex: none; width: 100%; }
 }
 
-/* --------------------------------------------------------------------
- * ## tablet devices (601px to 800px)  
- * -------------------------------------------------------------------- */
+/* Tablet devices (601px to 800px) */
 @media screen and (max-width: 800px) {
-    .tab-1 {
-        flex : none;
-        width: 8.3333333333%;
-    }
-
-    .tab-2 {
-        flex : none;
-        width: 16.6666666667%;
-    }
-
-    .tab-3 {
-        flex : none;
-        width: 25%;
-    }
-
-    .tab-4 {
-        flex : none;
-        width: 33.3333333333%;
-    }
-
-    .tab-5 {
-        flex : none;
-        width: 41.6666666667%;
-    }
-
-    .tab-6 {
-        flex : none;
-        width: 50%;
-    }
-
-    .tab-7 {
-        flex : none;
-        width: 58.3333333333%;
-    }
-
-    .tab-8 {
-        flex : none;
-        width: 66.6666666667%;
-    }
-
-    .tab-9 {
-        flex : none;
-        width: 75%;
-    }
-
-    .tab-10 {
-        flex : none;
-        width: 83.3333333333%;
-    }
-
-    .tab-11 {
-        flex : none;
-        width: 91.6666666667%;
-    }
-
-    .tab-12 {
-        flex : none;
-        width: 100%;
-    }
+    .tab-1 { flex: none; width: 8.3333333333%; }
+    .tab-2 { flex: none; width: 16.6666666667%; }
+    .tab-3 { flex: none; width: 25%; }
+    .tab-4 { flex: none; width: 33.3333333333%; }
+    .tab-5 { flex: none; width: 41.6666666667%; }
+    .tab-6 { flex: none; width: 50%; }
+    .tab-7 { flex: none; width: 58.3333333333%; }
+    .tab-8 { flex: none; width: 66.6666666667%; }
+    .tab-9 { flex: none; width: 75%; }
+    .tab-10 { flex: none; width: 83.3333333333%; }
+    .tab-11 { flex: none; width: 91.6666666667%; }
+    .tab-12 { flex: none; width: 100%; }
 }
 
-/* --------------------------------------------------------------------
- * ## mobile devices (401px to 600px)  
- * -------------------------------------------------------------------- */
+/* Mobile devices (401px to 600px) */
 @media screen and (max-width: 600px) {
     .row {
-        width        : 100%;
-        padding-left : 6vw;
+        width: 100%;
+        padding-left: 6vw;
         padding-right: 6vw;
     }
-
     .row .row {
-        padding-left : 0;
+        padding-left: 0;
         padding-right: 0;
     }
-
-    .mob-1 {
-        flex : none;
-        width: 8.3333333333%;
-    }
-
-    .mob-2 {
-        flex : none;
-        width: 16.6666666667%;
-    }
-
-    .mob-3 {
-        flex : none;
-        width: 25%;
-    }
-
-    .mob-4 {
-        flex : none;
-        width: 33.3333333333%;
-    }
-
-    .mob-5 {
-        flex : none;
-        width: 41.6666666667%;
-    }
-
-    .mob-6 {
-        flex : none;
-        width: 50%;
-    }
-
-    .mob-7 {
-        flex : none;
-        width: 58.3333333333%;
-    }
-
-    .mob-8 {
-        flex : none;
-        width: 66.6666666667%;
-    }
-
-    .mob-9 {
-        flex : none;
-        width: 75%;
-    }
-
-    .mob-10 {
-        flex : none;
-        width: 83.3333333333%;
-    }
-
-    .mob-11 {
-        flex : none;
-        width: 91.6666666667%;
-    }
-
-    .mob-12 {
-        flex : none;
-        width: 100%;
-    }
+    .mob-1 { flex: none; width: 8.3333333333%; }
+    .mob-2 { flex: none; width: 16.6666666667%; }
+    .mob-3 { flex: none; width: 25%; }
+    .mob-4 { flex: none; width: 33.3333333333%; }
+    .mob-5 { flex: none; width: 41.6666666667%; }
+    .mob-6 { flex: none; width: 50%; }
+    .mob-7 { flex: none; width: 58.3333333333%; }
+    .mob-8 { flex: none; width: 66.6666666667%; }
+    .mob-9 { flex: none; width: 75%; }
+    .mob-10 { flex: none; width: 83.3333333333%; }
+    .mob-11 { flex: none; width: 91.6666666667%; }
+    .mob-12 { flex: none; width: 100%; }
 }
 
-/* --------------------------------------------------------------------
- * ## small mobile devices (up to 400px)
- * -------------------------------------------------------------------- */
-
-/* stack columns vertically
- */
+/* Small mobile devices (up to 400px) */
 @media screen and (max-width: 400px) {
     .row .row {
-        margin-left : 0;
+        margin-left: 0;
         margin-right: 0;
     }
-
     .column {
-        flex        : none;
-        width       : 100%;
-        margin-left : 0;
+        flex: none;
+        width: 100%;
+        margin-left: 0;
         margin-right: 0;
-        padding     : 0;
+        padding: 0;
     }
 }
 
-/* --------------------------------------------------------------------
- * ## additional column stackpoints 
- * -------------------------------------------------------------------- */
+/* Additional column stackpoints */
 @media screen and (max-width: 900px) {
     .stack-on-900 {
-        flex        : none;
-        width       : 100%;
-        margin-left : 0;
+        flex: none;
+        width: 100%;
+        margin-left: 0;
         margin-right: 0;
     }
 }
-
 @media screen and (max-width: 700px) {
     .stack-on-700 {
-        flex        : none;
-        width       : 100%;
-        margin-left : 0;
+        flex: none;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+@media screen and (max-width: 550px) {
+    .stack-on-550 {
+        flex: none;
+        width: 100%;
+        margin-left: 0;
         margin-right: 0;
     }
 }
 
-@media screen and (max-width: 550px) {
-    .stack-on-550 {
-        flex        : none;
-        width       : 100%;
-        margin-left : 0;
-        margin-right: 0;
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: white; /* Add this line */
+}
+
+/* -------------------------------------------------------------------- */
+/* New responsive styles for specific components (add below your grid system) */
+/* -------------------------------------------------------------------- */
+
+/* Mobile Styles (max-width: 767px) */
+@media (max-width: 767px) {
+    .s-pageheader {
+        height: 50vh !important;
+        padding: 20px;
+    }
+
+    .s-pageheader__content {
+        width: 100% !important;
+        padding: 0 10px !important;
+        text-align: center !important;
+    }
+
+    .s-pageheader h1 {
+        font-size: 24px !important;
+        margin-top: 100px !important;
+    }
+
+    .s-pageheader h1.page-title {
+        font-size: 18px !important;
+    }
+
+    .s-testimonials__member {
+        margin: 20px 0 !important;
+        width: 100% !important;
+    }
+
+    .s-testimonials__avatar {
+        width: 150px !important;
+        height: 150px !important;
+    }
+
+    .s-testimonials__member h4 {
+        font-size: 24px !important;
+    }
+
+    .s-testimonials__member p {
+        font-size: 14px !important;
+    }
+
+    .content-block__media figure {
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    .content-block__text {
+        padding: 0 10px !important;
+    }
+
+    .s-footer {
+        padding-top: 50px !important;
+    }
+
+    .s-footer__logo img {
+        width: 150px !important;
+    }
+
+    .s-footer__info {
+        text-align: center !important;
+    }
+
+    .s-footer__social {
+        justify-content: center !important;
+    }
+
+    .s-footer__bottom {
+        text-align: center !important;
+    }
+}
+
+/* Tablet Styles (min-width: 768px) and (max-width: 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .s-pageheader {
+        height: 70vh !important;
+        padding: 30px;
+    }
+
+    .s-pageheader__content {
+        width: 80% !important;
+        padding: 0 20px !important;
+        text-align: center !important;
+    }
+
+    .s-pageheader h1 {
+        font-size: 28px !important;
+        margin-top: 150px !important;
+    }
+
+    .s-pageheader h1.page-title {
+        font-size: 20px !important;
+    }
+
+    .s-testimonials__member {
+        margin: 20px 0 !important;
+        width: 100% !important;
+    }
+
+    .s-testimonials__avatar {
+        width: 200px !important;
+        height: 200px !important;
+    }
+
+    .s-testimonials__member h4 {
+        font-size: 28px !important;
+    }
+
+    .s-testimonials__member p {
+        font-size: 16px !important;
+    }
+
+    .content-block__media figure {
+        width: 90% !important;
+        margin: 0 auto !important;
+    }
+
+    .content-block__text {
+        padding: 0 20px !important;
+    }
+
+    .s-footer {
+        padding-top: 100px !important;
+    }
+
+    .s-footer__logo img {
+        width: 200px !important;
+    }
+
+    .s-footer__info {
+        text-align: center !important;
+    }
+
+    .s-footer__social {
+        justify-content: center !important;
+    }
+
+    .s-footer__bottom {
+        text-align: center !important;
     }
 }
 
@@ -1076,6 +1207,51 @@ textarea {
     -moz-appearance   : none;
     appearance        : none;
 }
+
+
+
+/* Base styles */
+.row {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    padding: 0 20px;
+}
+.column {
+    float: left;
+    width: 100%; /* Full width on mobile by default */
+}
+
+/* Ensuring content does not bleed */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
+}
+
+/* Grid, list, and content styling */
+.content-block h3 {
+    margin-top: 20px; /* Adjusted margin for smaller screens */
+    margin-bottom: 20px;
+}
+
+/* Tablet and desktop adjustments */
+@media screen and (min-width: 768px) { /* Targeting tablets and above */
+    .column.xl-12 { width: 100%; } /* Full width on tablets */
+    
+    .content-block h3 {
+        margin-top: 90px; /* Original spacing for larger screens */
+        margin-bottom: -100px;
+    }
+}
+
+@media screen and (min-width: 1024px) { /* Targeting desktops */
+    .row.width-narrow { 
+        max-width: 960px; /* Example narrower width for desktop */
+    }
+}
+
 
 
 /* ===================================================================
@@ -1231,6 +1407,126 @@ textarea {
 /* --------------------------------------------------------------------
  * ## base type styles
  * -------------------------------------------------------------------- */
+
+ .global-container {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Responsive Padding */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .global-container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .global-container {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+
+
+
+
+.s-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.s-footer__main-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.s-footer__about, .s-footer__info {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+}
+
+.s-footer__logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.s-footer__info .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.s-footer__info .column {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+}
+
+.s-footer__social {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.s-footer__social li {
+    margin: 0 10px;
+}
+
+.ss-copyright {
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .s-footer__about, .s-footer__info {
+        flex: 1 1 45%;
+    }
+
+    .s-footer__info .column {
+        flex: 1 1 45%;
+    }
+}
+
+
+
+
+/* Target the menu container */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin-left: -10px;
+}
+
+/* Target the menu items */
+.nav-menu li {
+    margin-right: 5px; /* Adjust the gap between items */
+}
+
+/* Remove margin from the last item to avoid extra space */
+.nav-menu li:last-child {
+    margin-right: 0;
+}
+
+/* Style the links inside the menu items */
+.nav-menu li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    padding: 4px 0; /* Add padding to the links if needed */
+}
+
+
+
 body {
     font-family: var(--font-1);
     font-size  : var(--base-font-size);
@@ -2171,7 +2467,7 @@ select:-webkit-autofill:focus {
  input[type=button]:hover {
      background-color: #ffffff;
      border-color    : #ffffff;
-     color           : #ffffff;
+     color           : #41BCA5;
      outline         : 0;
  }
  
@@ -2202,7 +2498,8 @@ select:-webkit-autofill:focus {
      background  : #ffffff00;
      border-color: #ffffff00;
      color       : #ffffff;
- }
+     font-weight: bold;
+    }
  
  /* Button Modifiers */
  .btn.u-fullwidth,
@@ -2230,7 +2527,7 @@ select:-webkit-autofill:focus {
  
  .btn--stroke,
  button.btn--stroke {
-     background: linear-gradient(45deg, #41BCA5, #202F61) !important;     
+     background: linear-gradient(580deg, #41BCA5 -20%, #202F61 70%) !important;     
      font-weight: 500;
      font-style: var(--color-#ffffff);
      border     : 2px solid #ffffff;
@@ -2241,9 +2538,9 @@ select:-webkit-autofill:focus {
  button.btn--stroke:focus,
  .btn--stroke:hover,
  button.btn--stroke:hover {
-     background: #ffffff, !important;
-     border    : 2px solid #ffffff;
-     color     : #d3dedc;
+    background: linear-gradient(3000deg, #41bca5d9 -20%, #2a9a85d9 70%) !important;     
+    border    : 2px solid #89b49680;
+     color     : #ffffff;
  } 
  
  
@@ -2253,8 +2550,18 @@ select:-webkit-autofill:focus {
      padding-right: 3.2rem !important;
      border-radius: 1000px !important;
  }
- 
 
+ @media (max-width: 767px) {
+    .menu {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 10px !important;
+    }
+    .menu .menu-item {
+        margin: 5px 0 !important;
+    }
+}
 
 /* ===================================================================
  * # TABLE
@@ -3045,10 +3352,90 @@ body.menu-is-open {
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
+
 /* ===================================================================
  * # SITE HEADER
  *
+ *
  * ------------------------------------------------------------------- */
+
+ @media screen and (max-width: 768px) {
+    .s-header__block {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 20px; /* Add padding to avoid content sticking to edges */
+    }
+
+    .s-header__logo {
+        position: static;
+        left: auto;
+        transform: none;
+        margin-bottom: 15px; /* Increase space between logo and menu */
+        margin-left: 0; /* Reset margin */
+    }
+
+    .s-header__logo img {
+        width: 12rem; /* Adjust logo size for mobile */
+    }
+
+    .s-header__cta {
+        position: static;
+        display: block;
+        width: 100%;
+        margin-top: 10px; /* Add space between logo and CTA */
+    }
+
+    .s-header__nav-links {
+        flex-direction: column; /* Stack menu items vertically */
+        align-items: flex-start; /* Align items to the left */
+        gap: 10px; /* Space between menu items */
+        padding-left: 0;
+    }
+
+    .s-header__nav-links li {
+        margin-right: 0; /* Remove horizontal margin */
+        margin-bottom: 10px; /* Add vertical margin between items */
+    }
+
+    .s-header__cta-btn {
+        font-size: 16px; /* Set font size for CTA button */
+        padding: 10px 15px; /* Adjust padding for better touch targets */
+    }
+
+    .s-header__menu-toggle {
+        display: block; /* Show toggle icon for mobile */
+        margin-left: 0; /* Reset margin */
+        top: 20px; /* Adjust position */
+    }
+
+    .s-header__nav {
+        width: 100%; /* Full width for mobile menu */
+        padding: 20px; /* Add padding for better spacing */
+    }
+
+    .s-header__nav-links li a {
+        font-size: 16px; /* Set font size for menu items */
+        padding: 8px 0; /* Adjust padding for better touch targets */
+    }
+
+    .s-header__nav-social {
+        margin-left: 0; /* Reset margin */
+        justify-content: center; /* Center social icons */
+    }
+
+    .s-pageheader {
+        padding-top: var(--vspace-4); /* Reduce padding for mobile */
+        padding-bottom: var(--vspace-1_5);
+    }
+
+    .s-pageheader .page-title {
+        font-size: clamp(var(--text-xxl), 8vw, var(--text-huge-1)); /* Adjust font size for mobile */
+    }
+
+    .s-pageheader .page-title::before {
+        margin-top: 10px; /* Increase space between text and line */
+    }
+}
  .s-header {
     --header-height : 72px;
     --logo-width    : 15rem;
@@ -3074,16 +3461,17 @@ body.menu-is-open {
  * ## logo (centered)
  * -------------------------------------------------------------------- */
 .s-header__logo {
-    z-index : 999;
-    position: absolute;
-    left    : 50%;
-    transform: translateX(-50%);
+    z-index : 999; /* Ensure it is above everything else */
+    position: absolute; /* Use absolute positioning to center */
+    left    : 10.5%;
+    transform: translateX(-50%); /* Center horizontally */
+    top: 27px;
 }
 
 .s-header__logo a {
     display: block;
     margin: 0;
-    padding: 0;
+    padding: 5px;
     outline: 0;
     border: none;
     z-index: 20; 
@@ -3096,66 +3484,66 @@ body.menu-is-open {
 }
 
 /* --------------------------------------------------------------------
- * ## Desktop menu (align left)
+ * ## Menu (align left)
  * -------------------------------------------------------------------- */
-.s-header__desktop-nav {
-    z-index: 10;
+ .menu {
+    padding: 5px;
+}
+
+ .s-header__cta {
     position: absolute;
-    top: 0;
     left: 0;
-    margin-top: -20px;
-    margin-left: 75px;
     display: flex;
 }
 
-.s-header__desktop-nav .s-header__nav-links {
-    list-style: none;
+.s-header__nav-links {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 0;
     margin: 0;
-    gap: 20px;
-    z-index: 11;
-    position: relative;
+    padding: 0;
+    list-style: none;
 }
 
-.s-header__desktop-nav .s-header__nav-links li {
-    margin-right: 20px;
-    display: inline-block;
+.s-header__nav-links li {
+    margin-right: 0px; /* Space between menu items */
+    margin-top: 15%;
 }
 
 .s-header__cta-btn {
     padding: 10px 20px;
     font-size: 16px;
     text-decoration: none;
-    color: #000;
+    color: #000; /* Choose a color that fits your design */
 }
+
+/* Ensure the menu items are aligned to the left */
+.s-header__cta ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 
 /* --------------------------------------------------------------------
  * ## mobile menu toggle
  * -------------------------------------------------------------------- */
-.s-header__menu-toggle {
+ .s-header__menu-toggle {
     --toggle-block-width: 44px;
     --toggle-line-width : 28px;
     --toggle-line-height: 1px;
-    font-size           : 1.2rem;
+    font-size           : 1.8rem;
     width               : var(--toggle-block-width);
     height              : var(--toggle-block-width);
     position            : absolute;
-    top                 : 22px;
+    top                 : calc((var(--header-height) - var(--toggle-block-width)) / 2);
     left                : 0; 
     right               : auto; 
-    margin-left         : 8px;
-    background          : none;
-    border              : none;
-    cursor              : pointer;
-    display             : none; /* Hide by default, show in media query */
+    margin-left         : 20px; 
 }
+
 
 .s-header__menu-toggle span {
     display         : block;
-    background-color: rgba(255, 255, 255, 0.582);
+    background-color: white;
     width           : var(--toggle-line-width);
     height          : var(--toggle-line-height);
     margin-top      : -1px;
@@ -3189,7 +3577,8 @@ body.menu-is-open {
     bottom: -8px;
 }
 
-/* is clicked */
+/* is clicked 
+ */
 .s-header__menu-toggle.is-clicked span {
     background-color: rgba(255, 255, 255, 0);
     transition      : all 0.1s;
@@ -3197,7 +3586,7 @@ body.menu-is-open {
 
 .s-header__menu-toggle.is-clicked span::before,
 .s-header__menu-toggle.is-clicked span::after {
-    background-color: #42BEA7;
+    background-color: #41BCA5;
 }
 
 .s-header__menu-toggle.is-clicked span::before {
@@ -3208,6 +3597,27 @@ body.menu-is-open {
 .s-header__menu-toggle.is-clicked span::after {
     bottom   : 0;
     transform: rotate(225deg);
+}
+
+/* --------------------------------------------------------------------
+ * ## CTA Button
+ * -------------------------------------------------------------------- */
+ .s-header__cta {
+    --vspace-btn: var(--vspace-1_5);
+    position: absolute;
+    top: calc((var(--header-height) - var(--vspace-btn)) / 2); /* Center the button vertically */
+    right: calc(var(--gutter) + 1.6rem); /* Position the button from the right */
+}
+
+.s-header__cta-btn {
+    margin: 0;
+    padding: 0 2.4rem; /* Add horizontal padding */
+}
+
+.s-header__nav-links {
+    display: flex;
+    flex-direction: row; 
+    align-items: flex-start; /* Align the items to the right */
 }
 
 /* --------------------------------------------------------------------
@@ -3225,7 +3635,7 @@ body.menu-is-open {
     justify-content           : space-between;
     align-items               : center;
     flex-direction            : column;
-    background                : var(--color-gray-19, #000);
+    background                : none;
     color                     : var(--nav-text-color);
     font-family               : var(--font-2);
     padding                   : 15px 20px;
@@ -3240,25 +3650,24 @@ body.menu-is-open {
     position                  : fixed;
     top                       : 0;
     left                      : 0;
-    visibility                : hidden;
 }
 
 .s-header__nav-bottom {
     margin-top: auto;
-    padding-bottom: 20px;
 }
 
-/* navigation menu */
+/* navigation menu 
+ */
 .s-header__nav a,
 .s-header__nav .text-highlight {
-    color: var(--color-1, white);
+    color: var(--color-1);
 }
 
 .s-header__nav a:focus,
 .s-header__nav a:hover,
 .s-header__nav .text-highlight:focus,
 .s-header__nav .text-highlight:hover {
-    color: white;
+    color: #41BCA5;
 }
 
 .s-header__nav h6 {
@@ -3268,75 +3677,118 @@ body.menu-is-open {
     color        : var(--nav-text-color);
 }
 
-.s-header__nav .s-header__nav-links {
+.s-header__cta {
+    z-index: 10; /* Make sure it's above other elements */
+    position: absolute; /* Ensure it is positioned correctly */
+    top: 0;
+    left: 0; /* Move to the left */
+    margin-top: -35px;
+    margin-left: 75px; /* Adjust as needed */
+    display: flex; /* Make sure it follows flex behavior */    
+    
+    .s-header__nav-links {
+        z-index: 11;
+        position: relative; /* Ensure it's in the correct stacking order */
+    }
+    
+}
+
+.s-header__nav-links {
     list-style: none;
+    display: flex;
+    justify-content: flex-start; /* Aligns items to the left */
+    align-items: center;
     padding: 0;
-    margin: 2rem 0;
-    width: 100%;
+    margin: 0;
+    gap: 20px;
 }
 
-.s-header__nav .s-header__nav-links li {
+.s-header__nav-links li {
     padding-left: 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    display: block;
-    width: 100%;
-    margin-right: 10px; 
+    border-top  : -5px solid transparent;
+    display: inline-block;
+
 }
 
-.s-header__nav .s-header__nav-links li:last-child {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+.s-header__nav-links li:last-child {
+    border-bottom: 1px solid transparent;
 }
 
-.s-header__nav .s-header__nav-links li a {
-    display: block;
-    width: 100%;
-    padding: var(--vspace-0_5, 1rem) 0;
-    color: white;
+.s-header__nav-links li a {
+    display: inline-block;
+    padding: var(--vspace-0_5) 0;
+    color  : transparent;
 }
 
-/*  navigation menu logo */
+.s-header__nav-links li a:focus::before,
+.s-header__nav-links li a:hover::before {
+    color: transparent;
+}
+
+.s-header__nav-links a::before {
+    display          : block;
+    content          : counter(ctr, decimal-leading-zero) ".";
+    counter-increment: ctr;
+    font-family      : var(--font-3);
+    font-weight      : 500;
+    font-size        : 0.35em;
+    color            : transparent;
+    transition       : all 0.5s;
+    margin-bottom    : 0.15em;
+    position         : relative;
+}
+
+/*  navigation menu logo
+ */
 .s-header__nav-logo a {
     display: block;
-    margin: 0;
+    margin : 0;
     padding: 0;
     outline: 0;
-    border: none;
+    border : none;
+    
 }
 
 .s-header__nav-logo img {
-    width: var(--nav-logo-width);
-    margin: 0;
+    width         : var(--nav-logo-width);
+    margin        : 0;
     vertical-align: top;
 }
 
-/*  navigation menu close button */
+/*  navigation menu booking number
+ */
+.s-header__booking-no {
+    font-family: var(--font-3);
+    font-size  : var(--text-md);
+}
+
+/*  navigation menu close button
+ */
 .s-header__nav-close-btn {
-    display: block;
-    height: 30px;
-    width: 30px;
+    display      : block;
+    height       : 30px;
+    width        : 30px;
     border-radius: 50%;
-    font: 0/0 a;
-    text-shadow: none;
-    color: black;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    position: absolute;
-    top: 10px;
-    right: var(--vspace-1_25, 1.5rem);
-    left: 10px;
-    cursor: pointer;
+    font         : 0/0 a;
+    text-shadow  : none;
+    color        : solid;
+    border       : 1px solid rgba(255, 255, 255, 0.1);
+    position     : absolute;
+    top          : var(--vspace-1_25);
+    right        : var(--vspace-1_25);
 }
 
 .s-header__nav-close-btn span::before,
 .s-header__nav-close-btn span::after {
-    content: "";
-    display: block;
-    height: 1px;
-    width: 12px;
+    content         : "";
+    display         : block;
+    height          : 1px;
+    width           : 12px;
     background-color: white;
-    margin-top: -1px;
-    position: absolute;
-    top: 50%;
-    left: 8px;
+    margin-top      : -1px;
+    position        : absolute;
+    top             : 50%;
+    left            : 8px;
 }
 
 .s-header__nav-close-btn span::before {
@@ -3347,32 +3799,59 @@ body.menu-is-open {
     transform: rotate(45deg);
 }
 
-/* navigation menu underlay */
+/*  nav social
+ */
+ .s-header__nav-social {
+    margin-top : var(--vspace-1);
+    padding-top: var(--vspace-0_5);
+    border-top : 1px solid rgba(255, 255, 255, 0.05);
+    margin-left: -40px; /* Moves icons 40px to the left */
+    display: flex;
+    justify-content: flex-start; /* Aligns icons to the left */
+    gap: 4px; /* Space between icons */
+    position: relative;
+    z-index: 10; /* Ensure it's above other elements */
+    pointer-events: auto;
+}
+
+.s-header__nav-social svg {
+    cursor: pointer; /* Show hand cursor on hover */
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.s-header__nav-social svg:hover {
+    opacity: 0.8; /* Increase visibility on hover */
+}
+
+/* navigation menu underlay
+ */
 .menu-underlay {
-    z-index: 300;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
+    z-index         : 300;
+    position        : fixed;
+    top             : 0;
+    left            : 0;
+    right           : 0;
+    bottom          : 0;
+    width           : 100%;
+    height          : 100%;
     background-color: rgba(5, 5, 5, 0.7);
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+    opacity         : 0;
+    visibility      : hidden;
+    transition      : all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 .menu-is-open .menu-underlay {
-    opacity: 1;
+    opacity   : 1;
     visibility: visible;
-    cursor: pointer;
+    cursor    : pointer;
 }
 
-/* navigation menu is open */
+/* navigation menu is open 
+ */
 .menu-is-open .s-header__nav {
-    transform: translateX(0);
-    visibility: visible;
+    transform                 : translateX(0);
+    visibility                : visible;
     -webkit-overflow-scrolling: touch;
 }
 
@@ -3380,364 +3859,37 @@ body.menu-is-open {
  * responsive:
  * site-header
  * ------------------------------------------------------------------- */
-@media screen and (max-width: 900px) {
-    .s-header {
-        --logo-width: 13rem;
-    }
 
-    .s-header__logo {
-        top: -0.4rem;
-    }
-    
-    /* Show mobile menu toggle, hide desktop nav */
-    .s-header__menu-toggle {
-        display: block;
-        background: none;
-    }
-    
-    .s-header__desktop-nav {
-        display: none;
-    }
-}
-
-
-@media screen and (max-width: 1024px) {
-    .s-header__logo {
-      margin-top: 30px; 
-    }
-
-@media screen and (max-width: 500px) {
-    .s-header {
-        --logo-width: 11rem;
-        top: var(--vspace-0_25, 0.25rem);
-    }
-
-
+@media screen and (max-width: 768px) {
     .s-header__block {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 1rem;
-        position: relative; 
+      flex-direction: column; /* Stack logo and menu vertically */
+      align-items: flex-start; /* Align everything to the left */
     }
-    
+  
     .s-header__logo {
-        margin-right: auto;
+      position: static; /* Reset absolute positioning */
+      left: auto;
+      transform: none; /* Remove centering */
+      margin-bottom: 5px; /* Space between logo and menu */
+      margin-left: 30px;
     }
-
   
-  /* Desktop styles (screens wider than 1024px) */
-  @media screen and (min-width: 1025px) {
-    /* Hide mobile menu toggle button on desktop */
-    .s-header__menu-toggle {
-      display: none;
-    }
-    
-    /* Desktop navigation - explicitly horizontal with margin control */
     .s-header__cta {
-      margin-top: 0; /* You can adjust this to control vertical position */
+      position: static; /* Reset absolute positioning */
+      display: block; /* Ensure menu is visible */
+      width: 100%; /* Full width for menu */
     }
-    
+  
     .s-header__nav-links {
-      display: flex;
-      flex-direction: row; /* Explicitly horizontal */
-      align-items: center;
-      justify-content: flex-end;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      height: 100%; /* Match header height */
+      flex-direction: row; /* Horizontal menu */
+      justify-content: flex-start; /* Align menu items to the left */
+      gap: 0px; /* Space between menu items */
+      padding-left: 0; /* Remove default padding */
     }
-    
-    .s-header__nav-links li {
-      margin-left: 1.5rem;
-      display: inline-block; /* Ensure horizontal display */
-    }
-    
-    /* Hide mobile slide-out menu */
-    .s-header__nav {
-      display: none;
-      width: 50%;
-      font-size: 1.2em;
-    }
-    
-    /* Hide the menu underlay on desktop */
-    .menu-underlay {
-      display: none;
-    }
-  }
   
-  /* Mobile styles (screens 1024px and below) */
-  @media screen and (max-width: 1024px) {
-    /* Hide desktop navigation links */
-    .s-header__cta .s-header__nav-links {
-      display: none;
-    }
-    
-    /* Style for hamburger menu toggle button */
     .s-header__menu-toggle {
-      display: block;
-      cursor: pointer;
-      order: -1; /* Position at the far left */
-      margin-right: 1rem;
-      z-index: 90;
+      display: none; /* Hide toggle icon if not needed */
     }
-    
-    .s-header__menu-toggle span {
-        display: block;
-        width: 20px;
-        height: 3px;
-        margin-bottom: 5px;
-        background-color: #f0f0f0; 
-        border-radius: 1px;
-      }
-    
-    /* Mobile slide-out menu - fix for smallest screens */
-    .s-header__nav {
-      position: fixed;
-      top: auto;
-      left: 0; /* Open from left side */
-      bottom: 0;
-      width: 50%;
-      max-width: 85%; /* Prevent overflow on smallest screens */
-      background: #333;
-      z-index: 1000;
-      padding: 2rem;
-      overflow-y: auto;
-      transform: translateX(-100%); /* Start off-screen to the left */
-      transition: transform 0.3s ease;
-      visibility: hidden;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      color: #333; /* Ensure text is visible regardless of background */
-    }
-    
-    /* Show the menu when active */
-    .menu-is-open .s-header__nav {
-      transform: translateX(0);
-      visibility: visible;
-    }
-    
-    /* Style for mobile menu links */
-    .s-header__nav .s-header__nav-links {
-      display: flex;
-      flex-direction: column;
-      list-style: none;
-      margin: 2rem 0;
-      padding: 0;
-    }
-    
-    .s-header__nav .s-header__nav-links li {
-      margin-bottom: 1.25rem;
-    }
-    
-    .s-header__nav .s-header__nav-links a {
-      display: block;
-      color: #333; /* Ensure contrast with white background */
-      text-decoration: none;
-      font-size: 17px;
-    }
-    
-    /* Close button for mobile menu */
-    .s-header__nav-close {
-      display: block;
-      text-align: right;
-      left: 10px; /* Align to the left */
-      top: 10px; 
-      right: auto;
-      margin-bottom: 1.5rem;
-      font-size: 1.5rem;
-      cursor: pointer;
-      color: #333; /* Ensure visibility */
-    }
-    
-    /* Style for the menu underlay */
-    .menu-underlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.5);
-      z-index: 999;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.3s ease, visibility 0.3s;
-    }
-    
-    /* Show the underlay when menu is open */
-    .menu-is-open .menu-underlay {
-      opacity: 1;
-      visibility: visible;
-    }
-  }
-  
-  /* Extra small screens - ensure menu is visible */
-  @media screen and (max-width: 480px) {
-    .s-header__nav {
-      width: 240px; /* Slightly narrower for very small screens */
-      background-color: #fff !important; /* Force white background */
-    }
-    
-    .s-header__nav * {
-      color: #333 !important; /* Force dark text for contrast */
-    }
-  }
-  
-  /* Preloader styles */
-  .ss-preload {
-    overflow: hidden;
-  }
-  
-  .ss-preload #preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: #fff;
-    z-index: 9999;
-    transition: opacity 0.5s;
-  }
-  
-  .ss-loaded #preloader {
-    opacity: 0;
-  }
-  
-  .ss-show {
-    visibility: visible;
-  }
-  
-  /* Additional styles for better desktop nav appearance */
-  .btn.btn--primary.s-header__cta-btn {
-    display: inline-block;
-  }
-  
-  /* Variables you can adjust to fine-tune the desktop menu position */
-  :root {
-    --desktop-menu-margin-top: 0px; /* Adjust this value to control vertical position */
-    --desktop-menu-height: auto; /* Control menu height */
-  }
-  
-  /* Apply the variables */
-  @media screen and (min-width: 1025px) {
-    .s-header__cta {
-      margin-top: var(--desktop-menu-margin-top);
-      height: var(--desktop-menu-height);
-    }
-  }
-    
-    @media screen and (min-width: 1025px) {
-        /* Hide mobile menu toggle button on desktop */
-        .s-header__menu-toggle {
-        display: none;
-        }
-        
-        /* Display the desktop navigation */
-        .s-header__nav-links {
-        display: flex;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        }
-        
-        .s-header__nav-links li {
-        margin-left: 1.5rem;
-        }
-        
-        /* Hide mobile slide-out menu */
-        .s-header__nav {
-        display: none;
-        }
-    }
-    
-    /* Mobile styles (screens 1024px and below) */
-    @media screen and (max-width: 1024px) {
-        /* Hide desktop navigation links */
-        .s-header__cta .s-header__nav-links {
-        display: none;
-        }
-        
-        /* Style for hamburger menu toggle button */
-        .s-header__menu-toggle {
-        display: block;
-        cursor: pointer;
-        order: -1; /* Position at the far left */
-        margin-right: 1rem;
-        }
-        
-        /* Hamburger icon styling */
-        .s-header__menu-toggle span {
-        display: block;
-        width: 20px;
-        height: 2px;
-        margin-bottom: 3px;
-        background-color: #ffffffs;
-        border-radius: 1px;
-        }
-        
-        /* Mobile slide-out menu */
-        .s-header__nav {
-        position: fixed;
-        top: 0;
-        left: 0; /* Open from left side */
-        bottom: 0;
-        width: 280px;
-        background: #ffffff8e;
-        z-index: 1000;
-        padding: 2rem;
-        overflow-y: auto;
-        transform: translateX(-100%); /* Start off-screen to the left */
-        transition: transform 0.3s ease;
-        visibility: hidden;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        
-        /* Show the menu when active */
-        .menu-is-open .s-header__nav {
-        transform: translateX(0);
-        visibility: visible;
-        }
-        
-        /* Style for mobile menu links */
-        .s-header__nav .s-header__nav-links {
-        display: flex;
-        flex-direction: column;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        }
-        
-        .s-header__nav .s-header__nav-links li {
-        margin-bottom: 1rem;
-        }
-        
-        /* Close button for mobile menu */
-        .s-header__nav-close {
-        display: block;
-        text-align: right;
-        margin-bottom: 1.5rem;
-        cursor: pointer;
-        }
-        
-        /* Style for the menu underlay */
-        .menu-underlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.5);
-        z-index: 999;
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.3s ease, visibility 0.3s;
-        }
-        
-        /* Show the underlay when menu is open */
-        .menu-is-open .menu-underlay {
-        opacity: 1;
-        visibility: visible;
-        }
   }
 
 
@@ -4137,6 +4289,117 @@ footer {
     transition-delay: 1.5s;
 }
 
+
+/* Mobile Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    /* Header and Navigation */
+    .s-header__block {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .s-header__logo {
+        margin-bottom: 20px;
+    }
+    .s-header__nav-links {
+        width: 100%;
+        text-align: center;
+    }
+    .s-header__nav-links ul {
+        flex-direction: column;
+    }
+    .s-header__nav-links ul li {
+        margin: 10px 0;
+    }
+
+    /* Intro Section */
+    .s-pageheader {
+        height: auto;
+        padding: 20px;
+        text-align: justify;
+    }
+    .s-pageheader__content {
+        width: 100%;
+        padding: 0;
+        text-align: justify;
+    }
+    .page-title {
+        font-size: 40px !important;
+        margin-top: 50px !important;
+        text-align: center;
+    }
+
+    /* About Section */
+    .s-about__content {
+        margin-top: 0 !important;
+        text-align: justify;
+    }
+    .s-about__content-header h2 {
+        font-size: 50px !important;
+        text-align: center;
+    }
+    .slider-container {
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    .s-about__content-btn {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        text-align: center;
+    }
+    .attention-getter {
+        text-align: justify;
+    }
+
+    /* Image Sections */
+    .image-block {
+        flex-direction: column;
+        text-align: justify;
+    }
+    .slider-container {
+        width: 100% !important;
+        margin-right: 0 !important;
+    }
+    .text-block {
+        width: 100% !important;
+        padding: 20px;
+        text-align: justify;
+    }
+    .pull-quote blockquote {
+        text-align: justify;
+    }
+
+    /* Footer */
+    .s-footer__main-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: justify;
+    }
+    .s-footer__block {
+        text-align: justify;
+    }
+    .s-footer__info {
+        margin-top: 20px;
+        text-align: justify;
+    }
+    .s-footer__social {
+        justify-content: center;
+    }
+    .s-footer__bottom {
+        flex-direction: column;
+        align-items: center;
+        text-align: justify;
+    }
+}
+
+<style>
+    /* Add this to justify all text content and override any conflicting styles */
+    body, p, h1, h2, h3, h4, h5, h6, .text-desc, .attention-getter, .text-block, .pull-quote blockquote, .menublock-item__text p {
+        text-align: justify !important;
+    }
+</style>
+
 /* ------------------------------------------------------------------- 
  * responsive:
  * intro
@@ -4521,6 +4784,7 @@ footer {
 }
 
 
+
 /* ===================================================================
  * # TESTIMONIALS
  *
@@ -4575,7 +4839,7 @@ footer {
 }
 
 .s-testimonials__avatar {
-    background-color: var(--color-gray-7);
+    background-color: #d1d4df6a;
     width           : var(--vspace-2);
     height          : var(--vspace-2);
     padding         : 1rem;
@@ -4807,7 +5071,7 @@ footer {
 /* Style for Book a Consultation button */
 .s-footer__top .btn {
     display: inline-block;
-    padding: 6px 10px; /* Increase the horizontal padding to make it longer */
+    padding: 5px 10px; /* Increase the horizontal padding to make it longer */
     background-color: #41C2A9;
     color: #fff;
     font-size: 18px;
